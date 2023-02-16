@@ -73,9 +73,9 @@ const AgregarCel = () => {
                 className="form-control"
               />
             </div>
-
+            {/* BOTON AGREGAR */}
             <button type="submit" className="btnAgregar">
-              Tienda
+              Agregar
             </button>
           </form>
         </section>

@@ -1,3 +1,4 @@
+/* Se importan componentes */
 import React, { useState, useEffect } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
@@ -25,7 +26,7 @@ const Celulares_index = () => {
     await deleteDoc(celDelete);
     listarCelulares();
   };
-
+  /*  funcion  del modal de eliminar */
   const confirEliminar = (id) => {
     Swal.fire({
       title: "Esta seguro que quieres Eliminar?",
