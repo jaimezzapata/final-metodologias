@@ -3,7 +3,7 @@ import './style.css'
 
 const Clientes_index = () => {
   return (
-    <section>
+    <section className='container'>
 
     </section>
   )

@@ -3,7 +3,7 @@ import './style.css'
 
 const Accesorios_index = () => {
   return (
-    <section>
+    <section className='container'>
       
     </section>
   )
