@@ -1,50 +1,59 @@
-import './App.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './components/Home'
-import Error404 from './helper/Error404'
-import Accesorios_index from './components/accesorios/Accesorios_index'
-import Celulares_index from './components/celulares/Celulares_index'
-import Login_index from './components/login/Login_index'
-import AgregarCel from './components/celulares/AgregarCel'
-import Header from './helper/Header'
+import "./App.css";
+///Importacion de componentes
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Home";
+import Error404 from "./helper/Error404";
+import Accesorios_index from "./components/accesorios/Accesorios_index";
+import Celulares_index from "./components/celulares/Celulares_index";
+import Login_index from "./components/login/Login_index";
+import AgregarCel from "./components/celulares/AgregarCel";
+import Header from "./helper/Header";
+import EditarCel from "./components/celulares/EditarCel";
+
+///Creacion de rutas
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Home />,
-    errorElement: <Error404 />
+    errorElement: <Error404 />,
   },
   {
-    path: '/accesorios',
+    path: "/accesorios",
     element: <Accesorios_index />,
-    errorElement: <Error404 />
+    errorElement: <Error404 />,
   },
   {
-    path: '/celulares',
+    path: "/celulares",
     element: <Celulares_index />,
-    errorElement: <Error404 />
+    errorElement: <Error404 />,
   },
   {
-    path: '/login',
+    path: "/login",
     element: <Login_index />,
-    errorElement: <Error404 />
+    errorElement: <Error404 />,
   },
   {
-    path: '/add-cel',
+    path: "/add-cel",
     element: <AgregarCel />,
-    errorElement: <Error404 />
+    errorElement: <Error404 />,
   },
+
   {
-    path: '/header',
+    path: "/edit-cel/:id",
+    element: <EditarCel />,
+    errorElement: <Error404 />,
+  },
+
+  {
+    path: "/header",
     element: <Header />,
-    errorElement: <Error404 />
-  }
-])
+    errorElement: <Error404 />,
+  },
+]);
 
 const App = () => {
-  return (
-      <RouterProvider router={router}/>
-  )
-}
+  return <RouterProvider router={router} />;
+};
 
-export default App
+export default App;
