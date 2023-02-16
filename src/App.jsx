@@ -5,6 +5,7 @@ import Error404 from './helper/Error404'
 import Accesorios_index from './components/accesorios/Accesorios_index'
 import Celulares_index from './components/celulares/Celulares_index'
 import Login_index from './components/login/Login_index'
+import AgregarCel from './components/celulares/AgregarCel'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login_index />,
+    errorElement: <Error404 />
+  },
+  {
+    path: '/add-cel',
+    element: <AgregarCel />,
     errorElement: <Error404 />
   }
 ])

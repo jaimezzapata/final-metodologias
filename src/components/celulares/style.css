@@ -1,0 +1,75 @@
+.celulares-container{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listado-celulares{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cel-card{
+    width: 300px;
+    height: 600px;
+    border-radius: 20px;
+    font-size: .8rem;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: rgb(40, 40, 248);
+    position: relative;
+}
+
+.cel-card img{
+    width: 100%;
+    height: 48%;
+    border-radius: 20px;
+}
+
+.cel-subcont{
+    height: 48%;
+}
+
+.acciones{
+    width: 70px;
+    height: 40px;
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    top: 320px;
+    right: 10px;
+}
+
+.acciones button{
+    width: 50%;
+    background: none;
+    border: none;
+}
+
+.acciones button i{
+    font-size: 2rem;
+    color: gray;
+    transition: .5s;
+}
+
+.fa-trash:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.fa-pen-to-square:hover{
+    transform: scale(1.1);
+    transition: .5s;
+    cursor: pointer;
+}
