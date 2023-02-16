@@ -1,33 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './components/Home'
+import Error404 from './helper/Error404'
+import Accesorios_index from './components/accesorios/Accesorios_index'
+import Celulares_index from './components/celulares/Celulares_index'
+import Login_index from './components/login/Login_index'
+import AgregarCel from './components/celulares/AgregarCel'
+import Header from './helper/Header'
 
-function App() {
-  const [count, setCount] = useState(0)
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+    errorElement: <Error404 />
+  },
+  {
+    path: '/accesorios',
+    element: <Accesorios_index />,
+    errorElement: <Error404 />
+  },
+  {
+    path: '/celulares',
+    element: <Celulares_index />,
+    errorElement: <Error404 />
+  },
+  {
+    path: '/login',
+    element: <Login_index />,
+    errorElement: <Error404 />
+  },
+  {
+    path: '/add-cel',
+    element: <AgregarCel />,
+    errorElement: <Error404 />
+  },
+  {
+    path: '/header',
+    element: <Header />,
+    errorElement: <Error404 />
+  }
+])
 
+const App = () => {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+      <RouterProvider router={router}/>
   )
 }
 
