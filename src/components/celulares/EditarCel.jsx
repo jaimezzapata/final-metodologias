@@ -12,6 +12,7 @@ const EditarCel = () => {
   const [referencia, setReferencia] = useState("");
   const [precio, setPrecio] = useState(0);
   const [caracteristicas, setCaracteristicas] = useState("");
+  const [imagen, setImagen] = useState("");
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -23,6 +24,7 @@ const EditarCel = () => {
       referencia: referencia,
       precio: precio,
       caracteristicas: caracteristicas,
+      imagen: imagen
     };
     await updateDoc(admin, data);
     navigate("/celulares");
@@ -35,6 +37,7 @@ const EditarCel = () => {
       setReferencia(dataCell.data().referencia);
       setPrecio(dataCell.data().precio);
       setCaracteristicas(dataCell.data().caracteristicas);
+      setImagen(dataCell.data(),imagen);
     } else {
     }
   };
@@ -86,6 +89,16 @@ const EditarCel = () => {
               <input
                 value={caracteristicas}
                 onChange={(e) => setCaracteristicas(e.target.value)}
+                type="text"
+                className="form-control"
+              />
+            </div>
+
+            <div className="contenedorForm">
+              <label className="form">Imagen:</label>
+              <input
+                value={imagen}
+                onChange={(e) => setImagen(e.target.value)}
                 type="text"
                 className="form-control"
               />

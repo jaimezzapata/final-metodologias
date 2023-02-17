@@ -11,6 +11,7 @@ const AgregarCel = () => {
   const [referencia, setReferencia] = useState("");
   const [precio, setPrecio] = useState(0);
   const [caracteristicas, setCaracteristicas] = useState("");
+  const [imagen, setImagen] = useState("");
   const navigate = useNavigate();
 
   const celCard = collection(dataBase, "Admin-celulares");
@@ -22,6 +23,7 @@ const AgregarCel = () => {
       referencia: referencia,
       precio: precio,
       caracteristicas: caracteristicas,
+      imagen: imagen,
     });
     navigate("/celulares");
   };
@@ -69,6 +71,16 @@ const AgregarCel = () => {
               <input
                 value={caracteristicas}
                 onChange={(e) => setCaracteristicas(e.target.value)}
+                type="text"
+                className="form-control"
+              />
+            </div>
+
+            <div className="contenedorForm">
+              <label className="form">Imagen:</label>
+              <input
+                value={imagen}
+                onChange={(e) => setImagen(e.target.value)}
                 type="text"
                 className="form-control"
               />
