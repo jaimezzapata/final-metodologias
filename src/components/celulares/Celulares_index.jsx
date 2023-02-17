@@ -50,35 +50,13 @@ const Celulares_index = () => {
   }, []);
 
   return (
-    <section className="container">
-      <section className="celulares-container">
-        <Link to="/add-cel">Agregar celular</Link>
-
+    <section className="divFondo min-h-[100vh] ">
+      <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}
-        <section className="listado-celulares">
+        <section className="listado-celulares ">
           {celulares.map((celular) => (
             <div key={celular.id} className="cel-card">
-              <img src={`${celular.imagen}`} alt="card-img" />
               <div className="cel-subcont">
-                {/*  <div className="cel-info">
-                  <span>
-                    <h2>Marca:</h2>
-                    <p>{celular.marca}</p>
-                  </span>
-                  <span>
-                    <h2>Referencia:</h2>
-                    <p>{celular.referencia}</p>
-                  </span>
-                  <span>
-                    <h2>Precio:</h2>
-                    <p>{celular.precio}</p>
-                  </span>
-                  <span>
-                    <h2>Caracteristicas:</h2>
-                    <p>{celular.caracteristicas}</p>
-                  </span>
-                </div> */}
-
                 {/* OTRA FORMA DE MOSTRAR LAS CARDS */}
 
                 <div class="wrapper">
@@ -135,20 +113,13 @@ const Celulares_index = () => {
                     </div>
                   </div>
 
+                  <div class="productImage">
+                    <img src={`${celular.imagen}`} alt="Telefono" />
+                  </div>
+
                   <div class="productSpecifications">
                     <h1 className="TitleCard">Caracteristicas</h1>
                     <p>{celular.caracteristicas}</p>
-
-                    <div class="productFeatures">
-                      <div class="feature">
-                        <div class="featureIcon"></div>
-                        <div class="featureText"></div>
-                      </div>
-                      <div class="feature">
-                        <div class="featureIcon"></div>
-                        <div class="featureText"></div>
-                      </div>
-                    </div>
 
                     <div class="checkoutButton">
                       <div class="priceTag">
@@ -161,11 +132,11 @@ const Celulares_index = () => {
                       <div>
                         <Link
                           to={`/edit-cel/${celular.id}`}
-                          className="fa-solid fa-pen-to-square"
+                          className="fa-solid fa-pen-to-square "
                         ></Link>
                       </div>
                       <button class="preorder">
-                        <p>Preorder</p>
+                        <p>Ordenar</p>
                         <div class="buttonaction">
                           <svg
                             width="24"
@@ -184,23 +155,14 @@ const Celulares_index = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Boton acciones */}
-                {/*    <div className="acciones">
-                  <button onClick={() => confirEliminar(celular.id)}>
-                    <i className="fa-solid fa-trash"></i>
-                  </button>
-
-                  <Link
-                    to={`/edit-cel/${celular.id}`}
-                    className="fa-solid fa-pen-to-square"
-                  ></Link>
-                </div> */}
               </div>
             </div>
           ))}
         </section>
       </section>
+      <Link to="/add-cel " className="ml-40 bg-red-600">
+        Agregar nuevo celular
+      </Link>
     </section>
   );
 };
