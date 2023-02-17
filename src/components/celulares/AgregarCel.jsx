@@ -37,7 +37,7 @@ const AgregarCel = () => {
 
           <form onSubmit={store}>
             <div className="contenedorForm">
-              <label className="form">Marca:</label>
+              <label className="form ">Marca:</label>
               <input
                 value={marca}
                 onChange={(e) => setMarca(e.target.value)}
