@@ -6,6 +6,7 @@ const Accesorios_index = () => {
   return (
     <section className='container'>
       <Header />
+      <p>hola</p>
     </section>
   )
 }
