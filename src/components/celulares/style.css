@@ -4,7 +4,7 @@
   background: #000428;
   background: -webkit-linear-gradient(to bottom, #004e92, #000428);
   background: linear-gradient(to bottom, #004e92, #000428);
-  clip-path: polygon(0 0, 100% 0, 100% 79%, 0 96%);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
 }
 
 /* Parametro cards */
@@ -26,7 +26,6 @@
 
 .cel-card {
   border-radius: 30px;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -260,4 +259,13 @@ img:hover {
     -ms-transform: rotate(10deg) translate(10px, 6px);
     -o-transform: rotate(10deg) translate(10px, 6px);
   }
+}
+
+/* -----------------------ZONA FORMULARIO AGREGAR----------------- */
+
+.formCell {
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  margin: 0 auto;
 }
