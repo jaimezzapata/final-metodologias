@@ -1,41 +1,59 @@
 /* Se importan componentes */
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { collection, addDoc } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { getDoc, updateDoc, doc } from "firebase/firestore";
 import { dataBase } from "../../firebase/dataBase";
+import { async } from "@firebase/util";
 
-/* Comienzo de funciones */
+/* Creacion de funciones */
 
-const AgregarCel = () => {
+const EditarCel = () => {
   const [marca, setMarca] = useState("");
   const [referencia, setReferencia] = useState("");
   const [precio, setPrecio] = useState(0);
   const [caracteristicas, setCaracteristicas] = useState("");
   const [imagen, setImagen] = useState("");
   const navigate = useNavigate();
+  const { id } = useParams();
 
-  const celCard = collection(dataBase, "Admin-celulares");
-
-  const store = async (e) => {
+  const update = async (e) => {
     e.preventDefault();
-    await addDoc(celCard, {
+    const admin = doc(dataBase, "Admin-celulares", id);
+    const data = {
       marca: marca,
       referencia: referencia,
       precio: precio,
       caracteristicas: caracteristicas,
-      imagen: imagen,
-    });
+      imagen: imagen
+    };
+    await updateDoc(admin, data);
     navigate("/celulares");
   };
+
+  const tenerDatosId = async (id) => {
+    const dataCell = await getDoc(doc(dataBase, "Admin-celulares", id));
+    if (dataCell.exists()) {
+      setMarca(dataCell.data().marca);
+      setReferencia(dataCell.data().referencia);
+      setPrecio(dataCell.data().precio);
+      setCaracteristicas(dataCell.data().caracteristicas);
+      setImagen(dataCell.data(),imagen);
+    } else {
+    }
+  };
+
+  useEffect(() => {
+    tenerDatosId(id);
+  }, []);
 
   return (
     /*  Estructura de la tabla */
     <section className="container">
       <section className="celulares-container">
         <section className="listado-celulares">
-          <h1>Agregar Celulares</h1>
+          <h1>Editar consulta de celulares</h1>
 
-          <form onSubmit={store}>
+          <form onSubmit={update}>
             <div className="contenedorForm">
               <label className="form">Marca:</label>
               <input
@@ -85,9 +103,9 @@ const AgregarCel = () => {
                 className="form-control"
               />
             </div>
-            {/* BOTON AGREGAR */}
+            {/* boton actualizar */}
             <button type="submit" className="btnAgregar">
-              Agregar
+              Actualizar
             </button>
           </form>
         </section>
@@ -96,4 +114,4 @@ const AgregarCel = () => {
   );
 };
 
-export default AgregarCel;
+export default EditarCel;
