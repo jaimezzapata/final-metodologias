@@ -269,3 +269,70 @@ img:hover {
   box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
   margin: 0 auto;
 }
+
+.contenedorForm{
+  width: 100%;
+}
+
+.contenedorForm input, .contenedorForm textarea{
+  width: 80%;
+  outline: none;
+}
+
+/* Validacion formulario */
+
+.contenedorForm{
+  position: relative;
+}
+
+.fa-check, .fa-circle-exclamation{
+  opacity: 0;
+  transition: .5s all;
+  position: absolute;
+  margin: 7px 5px;
+  font-size: 1.3rem;
+}
+
+.fa-check{
+  color: rgb(54, 110, 54);
+  text-shadow: 0px 0px 3px white;
+}
+
+.fa-circle-exclamation{
+  color: rgb(94, 15, 15);
+  text-shadow: 0px 0px 3px white;
+}
+
+.exclamation-alert{
+  position: absolute;
+  left: 300px;
+  bottom: 10px;
+  background: rgb(124, 35, 35);
+  width: auto;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: .6rem;
+  color: white;
+  box-shadow: 3px 3px 10px black;
+  opacity: 0;
+  transition: .5s all;
+}
+
+.exclamation-alert p{
+  width: 100px;
+}
+
+#exclamationC{
+  bottom: 30px;
+}
+
+#carac-alert{
+  bottom: 30px;
+}
+
+#submit-alert{
+  margin-top: 50px;
+  color: white;
+  font-size: .8rem;
+}
