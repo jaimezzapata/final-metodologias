@@ -174,7 +174,7 @@ const Accesorios_index = () => {
                       </div>
                       <div>
                         <Link
-                          to={`/edit-cel/${accesorios.id}`}
+                          to={`/edit-acc/${accesorios.id}`}
                           className="fa-solid fa-pen-to-square"
                         ></Link>
                       </div>
@@ -206,7 +206,7 @@ const Accesorios_index = () => {
                   </button>
 
                   <Link
-                    to={`/edit-cel/${accesorios.id}`}
+                    to={`/edit-acc/${accesorios.id}`}
                     className="fa-solid fa-pen-to-square"
                   ></Link>
                 </div> */}

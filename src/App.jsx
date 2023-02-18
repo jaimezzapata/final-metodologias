@@ -10,6 +10,7 @@ import AgregarCel from "./components/celulares/AgregarCel";
 import AgregarAcc from "./components/accesorios/AgregarAcc";
 import Header from "./helper/Header";
 import EditarCel from "./components/celulares/EditarCel";
+import EditarAcc from "./components/accesorios/EditarAcc";
 
 ///Creacion de rutas
 
@@ -49,6 +50,13 @@ const router = createBrowserRouter([
   {
     path: "/edit-cel/:id",
     element: <EditarCel />,
+    errorElement: <Error404 />,
+  },
+
+  
+  {
+    path: "/edit-acc/:id",
+    element: <EditarAcc />,
     errorElement: <Error404 />,
   },
 
