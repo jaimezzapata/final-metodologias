@@ -30,14 +30,17 @@ const AgregarCel = () => {
 
   return (
     /*  Estructura de la tabla */
-    <section className="container">
-      <section className="celulares-container">
-        <section className="listado-celulares">
-          <h1>Agregar Celulares</h1>
-
-          <form onSubmit={store}>
-            <div className="contenedorForm">
-              <label className="form">Marca:</label>
+    <section className="divFondo min-h-[100vh] ">
+      <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
+        Agregar Celulares
+      </h1>
+      <section className=" celulares-container md:mx-0 mx-10 ">
+        <section className="formCell p-5  ">
+          <form className="w-full max-w-2xl  m-10 " onSubmit={store}>
+            <div className="contenedorForm ">
+              <label className="text-gray-300 block uppercase font-bold mb-2 ">
+                Marca:
+              </label>
               <input
                 value={marca}
                 onChange={(e) => setMarca(e.target.value)}
@@ -47,7 +50,9 @@ const AgregarCel = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="form">Referencia:</label>
+              <label className="text-gray-300 block uppercase font-bold mb-2">
+                Referencia:
+              </label>
               <input
                 value={referencia}
                 onChange={(e) => setReferencia(e.target.value)}
@@ -57,7 +62,9 @@ const AgregarCel = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="form">Precio:</label>
+              <label className="text-gray-300 block uppercase font-bold mb-2">
+                Precio:
+              </label>
               <input
                 value={precio}
                 onChange={(e) => setPrecio(e.target.value)}
@@ -67,26 +74,30 @@ const AgregarCel = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="form">Caracteristicas:</label>
-              <input
+              <label className="text-gray-300 block uppercase font-bold mb-2">
+                Caracteristicas:
+              </label>
+              <textarea
                 value={caracteristicas}
                 onChange={(e) => setCaracteristicas(e.target.value)}
                 type="text"
-                className="form-control"
-              />
+                className="form-control appearance-none block  bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
+              ></textarea>
             </div>
 
             <div className="contenedorForm">
-              <label className="form">Imagen:</label>
+              <label className="text-gray-300 block uppercase font-bold mb-2">
+                Imagen:
+              </label>
               <input
                 value={imagen}
                 onChange={(e) => setImagen(e.target.value)}
-                type="text"
-                className="form-control"
+                type="file"
+                className="form-control appearance-none block  bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
               />
             </div>
             {/* BOTON AGREGAR */}
-            <button type="submit" className="btnAgregar">
+            <button type="submit" className="btnAgregar bg-red-500 m-20">
               Agregar
             </button>
           </form>
