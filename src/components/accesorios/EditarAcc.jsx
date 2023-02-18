@@ -51,11 +51,11 @@ const EditarAcc = () => {
     <section className="container">
       <section className="accesorios-container">
         <section className="listado-accesorios">
-          <h1>Editar consulta de celulares</h1>
+          <h1>EDITAR CONSULTA DE ACCESORIO</h1>
 
           <form onSubmit={update}>
             <div className="contenedorForm">
-              <label className="form">Marca:</label>
+              <label className="form">TIPO ACCESORIO:</label>
               <input
                 value={marca}
                 onChange={(e) => setMarca(e.target.value)}
@@ -65,7 +65,7 @@ const EditarAcc = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="form">Referencia:</label>
+              <label className="form">CANTIDAD:</label>
               <input
                 value={referencia}
                 onChange={(e) => setReferencia(e.target.value)}
@@ -75,7 +75,7 @@ const EditarAcc = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="form">Precio:</label>
+              <label className="form">VALOR:</label>
               <input
                 value={precio}
                 onChange={(e) => setPrecio(e.target.value)}
