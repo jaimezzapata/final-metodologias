@@ -15,6 +15,10 @@
   font-family: "JetBrains Mono", monospace;
 }
 
+.active{
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
 /* Error 404 */
 
 .error404-container {
@@ -53,7 +57,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 150px;
+  background: #004e92;
 }
 .logo {
   width: 100px;
@@ -76,11 +80,10 @@
 .container-header a {
   text-decoration: none;
   font-size: 20px;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 .container-header a:hover {
-  border-bottom: 2px solid rgb(255, 255, 255);
-  color: rgb(57, 57, 57);
+  color: rgb(211, 211, 211);
 }
 .sesion {
   border-radius: 20px;
@@ -89,16 +92,18 @@
   box-shadow: 2px 2px 2px rgb(55, 55, 55);
 }
 .sesion:hover{
-  box-shadow: 0px 0px 5px blue;
-  border-bottom: 2px solid blue;
+  box-shadow: 0px 0px 10px blue;
+  text-shadow: 0px 0px 10px blue;
+}
+.sesion.active{
+  box-shadow: 0px 0px 20px blue;
+  text-shadow: 0px 0px 20px blue;
 }
 
 /* Container general */
 
-.container {
+.contenedor-principal{
   width: 100%;
-  height: auto;
-  padding: 0px 20px 40px 20px;
 }
 
 /*Home*/

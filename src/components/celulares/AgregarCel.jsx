@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { dataBase } from "../../firebase/dataBase";
+import { Link } from "react-router-dom";
 
 /* Comienzo de funciones */
 
@@ -147,7 +148,8 @@ const AgregarCel = () => {
 
   return (
     /*  Estructura de la tabla */
-    <section className="divFondo min-h-[100vh] ">
+    <section className="contenedor-principal">
+      <div className="divFondo min-h-[100vh]">
       <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
         Agregar Celulares
       </h1>
@@ -250,12 +252,16 @@ const AgregarCel = () => {
             </div>
             {/* BOTON AGREGAR */}
             <p id="submit-alert"></p>
-            <button type="submit" className="btnAgregar bg-red-500 m-20">
+            <div className="cel-but">
+            <button type="submit" className="btnAgregar">
               Agregar
             </button>
+            <Link className="cel-cancel" to="/celulares">Cancelar</Link>
+            </div>
           </form>
         </section>
       </section>
+      </div>
     </section>
   );
 };

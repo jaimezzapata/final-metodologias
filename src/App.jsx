@@ -5,10 +5,10 @@ import Home from "./components/Home";
 import Error404 from "./helper/Error404";
 import Accesorios_index from "./components/accesorios/Accesorios_index";
 import Celulares_index from "./components/celulares/Celulares_index";
+import Clientes_index from "./components/clientes/Clientes_index";
 import Login_index from "./components/login/Login_index";
 import AgregarCel from "./components/celulares/AgregarCel";
 import AgregarAcc from "./components/accesorios/AgregarAcc";
-import Header from "./helper/Header";
 import EditarCel from "./components/celulares/EditarCel";
 import EditarAcc from "./components/accesorios/EditarAcc";
 
@@ -23,6 +23,11 @@ const router = createBrowserRouter([
   {
     path: "/accesorios",
     element: <Accesorios_index />,
+    errorElement: <Error404 />,
+  },
+  {
+    path: "/clientes",
+    element: <Clientes_index />,
     errorElement: <Error404 />,
   },
   {
@@ -55,12 +60,6 @@ const router = createBrowserRouter([
   {
     path: "/edit-acc/:id",
     element: <EditarAcc />,
-    errorElement: <Error404 />,
-  },
-
-  {
-    path: "/header",
-    element: <Header />,
     errorElement: <Error404 />,
   },
 ])
