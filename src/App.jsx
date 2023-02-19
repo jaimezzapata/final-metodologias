@@ -10,7 +10,6 @@ import Login_index from "./components/login/Login_index";
 import AgregarCel from "./components/celulares/AgregarCel";
 import AgregarAcc from "./components/accesorios/AgregarAcc";
 import EditarCel from "./components/celulares/EditarCel";
-import Clientes_index from "./components/clientes/Clientes_index";
 import AgregarClient from "./components/clientes/AgregarClient";
 import EditarClient from "./components/clientes/EditarClient";
 import EditarAcc from "./components/accesorios/EditarAcc";
@@ -24,20 +23,27 @@ const router = createBrowserRouter([
     errorElement: <Error404 />,
   },
   {
-    path: "/accesorios",
-    element: <Accesorios_index />,
+    path: "/login",
+    element: <Login_index />,
     errorElement: <Error404 />,
   },
-  {
-    path: "/clientes",
-    element: <Clientes_index />,
-    errorElement: <Error404 />,
-  },
+  // ↓ celulares  ↓    ↓ 
   {
     path: "/celulares",
     element: <Celulares_index />,
     errorElement: <Error404 />,
   },
+  {
+    path: "/add-cel",
+    element: <AgregarCel />,
+    errorElement: <Error404 />,
+  },
+  {
+    path: "/edit-cel/:id",
+    element: <EditarCel />,
+    errorElement: <Error404 />,
+  },
+  // ↑ celulares   ↑     ↑
   // ↓ clientes↓  ↓    ↓ 
   {
     path: "/clientes",
@@ -55,14 +61,10 @@ const router = createBrowserRouter([
     errorElement: <Error404 />,
   },
   // ↑ clientes↑   ↑     ↑
+  // ↓ accesorios  ↓    ↓ 
   {
-    path: "/login",
-    element: <Login_index />,
-    errorElement: <Error404 />,
-  },
-  {
-    path: "/add-cel",
-    element: <AgregarCel />,
+    path: "/accesorios",
+    element: <Accesorios_index />,
     errorElement: <Error404 />,
   },
   {
@@ -70,18 +72,12 @@ const router = createBrowserRouter([
     element: <AgregarAcc/>,
     errorElement: <Error404 />,
   },
-  
-
-  {
-    path: "/edit-cel/:id",
-    element: <EditarCel />,
-    errorElement: <Error404 />,
-  },
   {
     path: "/edit-acc/:id",
     element: <EditarAcc />,
     errorElement: <Error404 />,
   },
+   // ↑ accesorios   ↑     ↑
 ])
 const App = () => {
   return <RouterProvider router={router} />;
