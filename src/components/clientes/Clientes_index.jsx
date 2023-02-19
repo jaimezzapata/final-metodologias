@@ -39,7 +39,7 @@ const Clientes_index = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         /*  LLamado a la accion  */
-        eliminarCelular(id);
+        eliminarCliente(id);
         Swal.fire("Eliminado!", "Tu elección a sido eliminada", "Exito!😎");
       }
     });
@@ -65,18 +65,61 @@ const Clientes_index = () => {
                   <div class="overviewInfo">
                     <div class="productinfo">
                       <div class="grouptext">
-                        <h3>direccion:</h3>
-                        <p>{cliente.direccion}</p>
+                        <h3>Primer nombre:</h3>
+                        <p>{cliente.primer_nombre}</p>
                       </div>
                       <div class="grouptext">
-                        <h3>telefono:</h3>
+                        <h3>Segundo nombre:</h3>
+                        <p>{cliente.segundo_nombre}</p>
+                      </div>
+                      <div class="grouptext">
+                        <h3>Primer apellido:</h3>
+                        <p>{cliente.primer_apellido}</p>
+                      </div>
+
+                      <div class="grouptext">
+                        <h3>Segundo apellido:</h3>
+                        <p>{cliente.segundo_apellido}</p>
+                      </div>
+                      <div class="grouptext">
+                        <h3>Telefono</h3>
                         <p>{cliente.telefono}</p>
                       </div>
                       <div class="grouptext">
-                        <h3>primerApellido:</h3>
-                        <p>{cliente.primer_apellido}</p>
+                        <h3>Direccion</h3>
+                        <p>{cliente.direccion}</p>
+                      </div>
+
+
+                      <div class="productSpecifications">
+                      <h1 className="TitleCard">Caracteristicas</h1>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dolores deserunt obcaecati fuga voluptatem vero odio magni molestiae quis perspiciatis cumque, nobis unde repudiandae itaque! Tenetur est asperiores nostrum molestias!
+                      
+
+
+                      {/* ↓ parte inferior targeta ↓ */}
+                      <div class="checkoutButton">
+                      <div class="priceTag">
+                        <span>
+                          <button onClick={() => confirEliminar(cliente.id)}>
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
+                        </span>
+                      </div>
+
+                      <div>
+                        <Link
+                          to={`/edit-cel/${cliente.id}`}
+                          className="fa-solid fa-pen-to-square "
+                        ></Link>
+                      </div>
+                      
+                      </div>
+                      {/* ↑ parte inferior targeta ↑ */}
                       </div>
                     </div>
+
+                    
                   </div>
                   {/* fin targeta */}
                 </div>
