@@ -274,22 +274,23 @@ Degradado de la parte donde esta Marca... Etc */
   z-index: 1;
 }
 
-.contenedorForm{
+.contenedorForm {
   width: 100%;
 }
 
-.contenedorForm input, .contenedorForm textarea{
+.contenedorForm input,
+.contenedorForm textarea {
   width: 80%;
   outline: none;
 }
 
-.cel-but{
+.cel-but {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.btnAgregar{
+.btnAgregar {
   padding: 10px;
   color: rgb(255, 255, 255);
   font-weight: 900;
@@ -297,11 +298,11 @@ Degradado de la parte donde esta Marca... Etc */
   border: 2px solid rgb(62, 62, 255);
 }
 
-.btnAgregar:hover{
+.btnAgregar:hover {
   box-shadow: 0px 0px 10px rgb(83, 83, 255);
 }
 
-.cel-cancel{
+.cel-cancel {
   padding: 10px;
   color: rgb(255, 255, 255);
   font-weight: 900;
@@ -309,35 +310,36 @@ Degradado de la parte donde esta Marca... Etc */
   border: 2px solid rgb(255, 62, 62);
 }
 
-.cel-cancel:hover{
+.cel-cancel:hover {
   box-shadow: 0px 0px 10px rgb(255, 62, 62);
 }
 
 /* Validacion formulario */
 
-.contenedorForm{
+.contenedorForm {
   position: relative;
 }
 
-.fa-check, .fa-circle-exclamation{
+.fa-check,
+.fa-circle-exclamation {
   opacity: 0;
-  transition: .5s all;
+  transition: 0.5s all;
   position: absolute;
   margin: 7px 5px;
   font-size: 1.3rem;
 }
 
-.fa-check{
+.fa-check {
   color: rgb(54, 110, 54);
   text-shadow: 0px 0px 3px white;
 }
 
-.fa-circle-exclamation{
+.fa-circle-exclamation {
   color: rgb(94, 15, 15);
   text-shadow: 0px 0px 3px white;
 }
 
-.exclamation-alert{
+.exclamation-alert {
   position: absolute;
   left: 300px;
   bottom: 10px;
@@ -346,33 +348,33 @@ Degradado de la parte donde esta Marca... Etc */
   padding: 5px;
   text-align: center;
   border-radius: 10px;
-  font-size: .6rem;
+  font-size: 0.6rem;
   color: white;
   box-shadow: 3px 3px 10px black;
   opacity: 0;
-  transition: .5s all;
+  transition: 0.5s all;
 }
 
-.exclamation-alert p{
+.exclamation-alert p {
   width: 100px;
 }
 
-#exclamationC{
+#exclamationC {
   bottom: 30px;
 }
 
-#carac-alert{
+#carac-alert {
   bottom: 30px;
 }
 
-#submit-alert{
+#submit-alert {
   margin-top: 20px;
   margin-bottom: 20px;
   color: white;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
-.add-cel{
+.add-cel {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -382,12 +384,12 @@ Degradado de la parte donde esta Marca... Etc */
   padding: 10px;
   padding-right: 25px;
   border-radius: 20px;
-  transform: translateX(226px);
-  transition: .7s;
+  transform: translateX(215px);
+  transition: 0.7s;
   color: white;
 }
 
-.add-cel:hover{
+.add-cel:hover {
   transform: translateX(20px);
-  transition: .7s;
+  transition: 0.7s;
 }

@@ -15,7 +15,7 @@
   font-family: "JetBrains Mono", monospace;
 }
 
-.active{
+.active {
   border-bottom: 2px solid rgb(255, 255, 255);
 }
 
@@ -52,12 +52,13 @@
   font-size: 3rem;
   color: white;
 }
+
 /*Header*/
 .container-header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #004e92;
+  background: #004e92b6;
 }
 .logo {
   width: 100px;
@@ -88,76 +89,73 @@
 .sesion {
   border-radius: 20px;
   padding: 7px;
-  border: 2px blue solid ;
+  border: 2px blue solid;
   box-shadow: 2px 2px 2px rgb(55, 55, 55);
 }
-.sesion:hover{
+.sesion:hover {
   box-shadow: 0px 0px 10px blue;
   text-shadow: 0px 0px 10px blue;
 }
-.sesion.active{
+.sesion.active {
   box-shadow: 0px 0px 20px blue;
   text-shadow: 0px 0px 20px blue;
 }
 
 /* Container general */
 
-.contenedor-principal{
+.contenedor-principal {
   width: 100%;
 }
 
 /*Home*/
-.main{
+.main {
   width: 90%;
   margin: 80px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.main p{
+.main p {
   width: 50%;
   margin: 15px;
 }
-.main h4{
+.main h4 {
   padding: 15px;
   width: 450px;
   height: 40px;
   text-align: center;
-  background-color:lightblue;
+  background-color: lightblue;
   border-radius: 15px;
   color: white;
   margin-bottom: 60px;
 }
-.main h1{
+.main h1 {
   font-size: 35px;
-  letter-spacing: .1;
+  letter-spacing: 0.1;
   margin-bottom: 25px;
   font-weight: 900;
 }
 
-.container-p{
+.container-p {
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
   gap: 30px;
   align-items: center;
 }
-.container-p img{
+.container-p img {
   width: 50%;
-
 }
 
-.button{
+.button {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   width: 200px;
   padding: 10px;
   text-align: center;
-  background-color:lightblue;
+  background-color: lightblue;
   border-radius: 15px;
   color: white;
   margin-left: 300px;
 }
-
-

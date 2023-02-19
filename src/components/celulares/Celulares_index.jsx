@@ -4,7 +4,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { collection, doc, getDocs, deleteDoc } from "firebase/firestore";
 import { dataBase } from "../../firebase/dataBase";
-import Header from "../../helper/Header"
+import Header from "../../helper/Header";
 ///Componentes de alerta
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -117,7 +117,11 @@ const Celulares_index = () => {
                   </div>
 
                   <div class="productImage">
-                    <img src={`${celular.imagen}`} alt="Telefono" />
+                    <img
+                      src={`${celular.imagen}`}
+                      alt="Telefono"
+                      className="ImgMovimiento"
+                    />
                   </div>
 
                   <div class="productSpecifications">
@@ -164,7 +168,7 @@ const Celulares_index = () => {
         </section>
       </section>
       <Link to="/add-cel " className="add-cel ml-40 bg-red-600">
-      <i class="fa-solid fa-plus"></i> <h1>Agregar nuevo celular</h1>
+        <i class="fa-solid fa-plus"></i> <h1>Agregar nuevo celular</h1>
       </Link>
     </section>
   );
