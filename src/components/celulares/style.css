@@ -38,7 +38,7 @@
 }
 
 .wrapper:hover {
-  box-shadow: -12px -5px 2px -1px rgba(0, 170, 255, 0.387);
+  box-shadow: -1px -5px 5px -1px rgba(0, 170, 255, 0.387);
   transform: scale(1.03);
 }
 
