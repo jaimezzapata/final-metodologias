@@ -4,9 +4,10 @@ import Header from "../helper/Header";
 
 const Home = () => {
   return (
-    <section>   
+    <section>
+      <div className="divFondo "></div>
       <Header />
-      <section className="main">
+      <section className="main ">
         <h4>El mejor contenido para tu smartphone.</h4>
         <div className="container-p">
           <p>
