@@ -1,0 +1,271 @@
+/* Section de fondo degradado cortado */
+
+.divFondo {
+  background: #000428;
+  background: -webkit-linear-gradient(to bottom, #004e92, #000428);
+  background: linear-gradient(to bottom, #004e92, #000428);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+}
+
+/* Parametro cards */
+
+.celulares-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 40px 10px;
+}
+
+.listado-celulares {
+  margin: 0 auto;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cel-card {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.cel-card img {
+  width: 100%;
+  height: 48%;
+  border-radius: 20px;
+}
+
+/* Comienzo de edicion de la Card */
+.wrapper {
+  width: 350px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 2px 3px 10px 2px rgba(37, 36, 36, 0.863);
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.wrapper:hover {
+  box-shadow: -12px -5px 2px -1px rgba(0, 170, 255, 0.387);
+  transform: scale(1.03);
+}
+
+.overviewInfo,
+.productSpecifications {
+  padding: 24px;
+}
+/* 
+Degradado de la parte donde esta Marca... Etc */
+
+.overviewInfo {
+  background-image: linear-gradient(
+    to bottom,
+    #000341,
+    #011458,
+    #052371,
+    #06328a,
+    #0042a5
+  );
+}
+
+/* Edicion del icono de compra */
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.cartbutton {
+  position: relative;
+}
+
+.cartbutton svg {
+  color: #d5d5d5e1;
+}
+.backbutton,
+.cartbutton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.neurobutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 3px 4px 5px 0px rgba(15, 100, 204, 0.884),
+    inset 3px 6px 6px 5px rgba(231, 231, 231, 0.1),
+    -2px -2px 8px 2px rgba(28, 28, 29, 0.575),
+    2px 2px 6px 3px rgba(43, 41, 41, 0.627);
+}
+/* Informacion del producto */
+.productinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 200px;
+  margin-bottom: 50px;
+  color: rgb(217, 217, 217);
+}
+
+/* Caracteristicas de la imagen con movimiento */
+
+.productImage {
+  position: absolute;
+  width: 321px;
+  height: auto;
+  margin-top: -258px;
+  margin-left: 20px;
+  animation: updowncontroller infinite 7s alternate;
+  -webkit-animation: updowncontroller infinite 7s alternate;
+}
+
+.productImage img {
+  margin-left: 30px;
+  width: 100%;
+  height: auto;
+  transition: ease 5s all;
+  -webkit-transition: ease 5s all;
+  -moz-transition: ease 5s all;
+  -ms-transition: ease 5s all;
+  -o-transition: ease 5s all;
+}
+
+.productImage img:hover {
+  transition: ease 2s all;
+  animation: none;
+  transform: rotate(-0deg) translate(-0px, 66px);
+  -webkit-transform: rotate(-20deg) translate(-0px, 66px);
+  -moz-transform: rotate(-20deg) translate(-0px, 66px);
+  -ms-transform: rotate(-20deg) translate(-0px, 66px);
+  -o-transform: rotate(-20deg) translate(-0px, 66px);
+}
+
+/* Caracteristicas del producto */
+
+.productSpecifications {
+  background-color: #181e2b;
+  color: aliceblue;
+}
+
+.grouptext h3 {
+  letter-spacing: 3.2px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.productSpecifications p {
+  opacity: 0.8;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #d1d1d1;
+}
+/* Titulo caracteristicas */
+.TitleCard {
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+/* Parte de los botones */
+
+.checkoutButton {
+  display: flex;
+  width: 100%;
+  background-image: var(--bg-shape-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: -2px -2px 2px 0px rgba(213, 213, 213, 0.432),
+    2px 2px 3px 0px rgba(12, 12, 12, 0.699),
+    inset 0px 0px 0px 2px rgba(60, 60, 60, 0.479);
+  margin-top: 30px;
+  padding: 14px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botones de acciones */
+
+.fa-pen-to-square {
+  font-size: 30px;
+  color: #61c7ef;
+}
+
+.fa-trash {
+  font-size: 30px;
+  color: #dd2f08;
+}
+
+.fa-pen-to-square:hover {
+  color: #157ebb;
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  color: #8a0639;
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* ordenar button*/
+.preorder {
+  padding: 5px;
+  outline: 0;
+  border: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(85deg, #61c7ef, #4833fb);
+  color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.buttonaction {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Parte de la animacion de la imagen */
+
+@keyframes updowncontroller {
+  0% {
+    transform: rotate(10deg) translate(16px, 6px);
+    -webkit-transform: rotate(10deg) translate(16px, 6px);
+    -moz-transform: rotate(10deg) translate(16px, 6px);
+    -ms-transform: rotate(10deg) translate(16px, 6px);
+    -o-transform: rotate(10deg) translate(16px, 6px);
+  }
+  80%,
+  100% {
+    transform: rotate(10deg) translate(10px, 6px);
+    -webkit-transform: rotate(10deg) translate(10px, 6px);
+    -moz-transform: rotate(10deg) translate(10px, 6px);
+    -ms-transform: rotate(10deg) translate(10px, 6px);
+    -o-transform: rotate(10deg) translate(10px, 6px);
+  }
+}
+
+/* -----------------------ZONA FORMULARIO AGREGAR----------------- */
+
+.formCell {
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  margin: 0 auto;
+}

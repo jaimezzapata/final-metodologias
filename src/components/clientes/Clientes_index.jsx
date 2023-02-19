@@ -84,6 +84,8 @@ const Clientes_index = () => {
                         <h3>primerApellido:</h3>
                         <p>{cliente.primer_apellido}</p>
                       </div>
+    <section className='contenedor-principal'>
+      <Header />
 
                     </div>
                   </div>
