@@ -1,17 +1,3 @@
-/* Section de fondo degradado cortado */
-
-.divFondo {
-  background: #000428;
-  background: -webkit-linear-gradient(to bottom, #004e92, #000428);
-  background: linear-gradient(to bottom, #004e92, #000428);
-  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
-  position: absolute;
-  width: 100%;
-  height: 150%;
-  border-color: #004e92;
-  z-index: 0;
-}
-
 /* Parametro cards */
 
 .celulares-container {
@@ -384,7 +370,7 @@ Degradado de la parte donde esta Marca... Etc */
   padding: 10px;
   padding-right: 25px;
   border-radius: 20px;
-  transform: translateX(215px);
+  transform: translateX(226px);
   transition: 0.7s;
   color: white;
 }

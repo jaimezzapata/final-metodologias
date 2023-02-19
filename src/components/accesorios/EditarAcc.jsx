@@ -24,7 +24,7 @@ const EditarAcc = () => {
       referencia: referencia,
       precio: precio,
       caracteristicas: caracteristicas,
-      imagen: imagen
+      imagen: imagen,
     };
     await updateDoc(admin, data);
     navigate("/accesorios");
@@ -37,7 +37,7 @@ const EditarAcc = () => {
       setReferencia(dataCell.data().referencia);
       setPrecio(dataCell.data().precio);
       setCaracteristicas(dataCell.data().caracteristicas);
-      setImagen(dataCell.data(),imagen);
+      setImagen(dataCell.data(), imagen);
     } else {
     }
   };
@@ -49,6 +49,7 @@ const EditarAcc = () => {
   return (
     /*  Estructura de la tabla */
     <section className="container">
+      <div className="divFondo "></div>
       <section className="accesorios-container">
         <section className="listado-accesorios">
           <h1>EDITAR CONSULTA DE ACCESORIO</h1>

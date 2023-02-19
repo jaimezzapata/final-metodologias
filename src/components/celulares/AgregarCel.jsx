@@ -8,118 +8,117 @@ import { Link } from "react-router-dom";
 /* Comienzo de funciones */
 
 const AgregarCel = () => {
+  // Validacion
 
-   // Validacion
+  const input = document.querySelectorAll("#form input");
+  const textarea = document.querySelectorAll("#form textarea");
+  const submitAlert = document.getElementById("submit-alert");
+  const vMarca = document.getElementById("marca");
+  const vReferencia = document.getElementById("referencia");
+  const vPrecio = document.getElementById("precio");
+  const vCaracteristicas = document.getElementById("caracteristicas");
+  const vImagen = document.getElementById("imagen");
+  const marcaA = document.getElementById("marca-alert");
+  const referenciaA = document.getElementById("referencia-alert");
+  const precioA = document.getElementById("precio-alert");
+  const caracteristicasA = document.getElementById("carac-alert");
+  const imagenA = document.getElementById("imagen-alert");
+  const check = document.getElementById("check");
+  const exclamation = document.getElementById("exclamation");
+  const checkR = document.getElementById("checkR");
+  const exclamationR = document.getElementById("exclamationR");
+  const checkP = document.getElementById("checkP");
+  const exclamationP = document.getElementById("exclamationP");
+  const checkC = document.getElementById("checkC");
+  const exclamationC = document.getElementById("exclamationC");
+  const checkI = document.getElementById("checkI");
+  const exclamationI = document.getElementById("exclamationI");
 
-   const input = document.querySelectorAll('#form input')
-   const textarea = document.querySelectorAll('#form textarea')
-   const submitAlert = document.getElementById('submit-alert')
-   const vMarca = document.getElementById('marca');
-   const vReferencia = document.getElementById('referencia');
-   const vPrecio = document.getElementById('precio');
-   const vCaracteristicas = document.getElementById('caracteristicas');
-   const vImagen = document.getElementById('imagen');
-   const marcaA = document.getElementById('marca-alert');
-   const referenciaA = document.getElementById('referencia-alert');
-   const precioA = document.getElementById('precio-alert');
-   const caracteristicasA = document.getElementById('carac-alert');
-   const imagenA = document.getElementById('imagen-alert');
-   const check = document.getElementById('check')
-   const exclamation = document.getElementById('exclamation')
-   const checkR = document.getElementById('checkR')
-   const exclamationR = document.getElementById('exclamationR')
-   const checkP = document.getElementById('checkP')
-   const exclamationP = document.getElementById('exclamationP')
-   const checkC = document.getElementById('checkC')
-   const exclamationC = document.getElementById('exclamationC')
-   const checkI = document.getElementById('checkI')
-   const exclamationI = document.getElementById('exclamationI')
- 
- 
-   const vLetras = /^[A-Za-z]{1,20}$/
-   const vLetrasyNum = /^[a-zA-Z0-9]{1,20}$/
-   const vNumeros = /[^a-z ]\ *([.0-9])*\d/
-   const vUrl = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig
- 
-   const valForm = (e) => {
-     e.preventDefault()
-     switch (e.target.name) {
-       case "marca":
-         if (vLetras.test(e.target.value)){
-           check.style.opacity = '1'
-           exclamation.style.opacity = '0'
-           marcaA.style.opacity = '0'
-           submitAlert.textContent = ''
-         } else {
-           exclamation.style.opacity = '1'
-           check.style.opacity = '0'
-           marcaA.style.opacity = '1'
-           submitAlert.textContent = 'Rellene los campos correctamente.'
-         }
-       break;
-       case "referencia":
-         if (vLetrasyNum.test(e.target.value)){
-           checkR.style.opacity = '1'
-           exclamationR.style.opacity = '0'
-           referenciaA.style.opacity = '0'
-           submitAlert.textContent = ''
-         } else {
-           exclamationR.style.opacity = '1'
-           checkR.style.opacity = '0'
-           referenciaA.style.opacity = '1'
-           submitAlert.textContent = 'Rellene los campos correctamente.'
-         }
-       break;
-       case "precio":
-         if (vNumeros.test(e.target.value)){
-           checkP.style.opacity = '1'
-           exclamationP.style.opacity = '0'
-           precioA.style.opacity = '0'
-           submitAlert.textContent = ''
-         } else {
-           exclamationP.style.opacity = '1'
-           checkP.style.opacity = '0'
-           precioA.style.opacity = '1'
-           submitAlert.textContent = 'Rellene los campos correctamente.'
-         }
-       break;
-       case "caracteristicas":
-         if (vLetrasyNum.test(e.target.value)){
-           checkC.style.opacity = '1'
-           exclamationC.style.opacity = '0'
-           caracteristicasA.style.opacity = '0'
-           submitAlert.textContent = ''
-         } else {
-           exclamationC.style.opacity = '1'
-           checkC.style.opacity = '0'
-           caracteristicasA.style.opacity = '1'
-           submitAlert.textContent = 'Rellene los campos correctamente.'
-         }
-       break;
-       case "imagen":
-         if (vUrl.test(e.target.value)){
-           checkI.style.opacity = '1'
-           exclamationI.style.opacity = '0'
-           imagenA.style.opacity = '0'
-           submitAlert.textContent = ''
-         } else {
-           exclamationI.style.opacity = '1'
-           checkI.style.opacity = '0'
-           imagenA.style.opacity = '1'
-           submitAlert.textContent = 'Rellene los campos correctamente.'
-         }
-       break;
-     }
-   }
- 
-   input.forEach((input) => {
-     input.addEventListener("keyup", valForm)
-     input.addEventListener("blur", valForm)
-   })
-   textarea.forEach((textarea) => {
-     textarea.addEventListener("keyup", valForm)
-     textarea.addEventListener("blur", valForm)
-   })
+  const vLetras = /^[A-Za-z]{1,20}$/;
+  const vLetrasyNum = /^[a-zA-Z0-9]{1,20}$/;
+  const vNumeros = /[^a-z ]\ *([.0-9])*\d/;
+  const vUrl =
+    /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
+
+  const valForm = (e) => {
+    e.preventDefault();
+    switch (e.target.name) {
+      case "marca":
+        if (vLetras.test(e.target.value)) {
+          check.style.opacity = "1";
+          exclamation.style.opacity = "0";
+          marcaA.style.opacity = "0";
+          submitAlert.textContent = "";
+        } else {
+          exclamation.style.opacity = "1";
+          check.style.opacity = "0";
+          marcaA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
+        }
+        break;
+      case "referencia":
+        if (vLetrasyNum.test(e.target.value)) {
+          checkR.style.opacity = "1";
+          exclamationR.style.opacity = "0";
+          referenciaA.style.opacity = "0";
+          submitAlert.textContent = "";
+        } else {
+          exclamationR.style.opacity = "1";
+          checkR.style.opacity = "0";
+          referenciaA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
+        }
+        break;
+      case "precio":
+        if (vNumeros.test(e.target.value)) {
+          checkP.style.opacity = "1";
+          exclamationP.style.opacity = "0";
+          precioA.style.opacity = "0";
+          submitAlert.textContent = "";
+        } else {
+          exclamationP.style.opacity = "1";
+          checkP.style.opacity = "0";
+          precioA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
+        }
+        break;
+      case "caracteristicas":
+        if (vLetrasyNum.test(e.target.value)) {
+          checkC.style.opacity = "1";
+          exclamationC.style.opacity = "0";
+          caracteristicasA.style.opacity = "0";
+          submitAlert.textContent = "";
+        } else {
+          exclamationC.style.opacity = "1";
+          checkC.style.opacity = "0";
+          caracteristicasA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
+        }
+        break;
+      case "imagen":
+        if (vUrl.test(e.target.value)) {
+          checkI.style.opacity = "1";
+          exclamationI.style.opacity = "0";
+          imagenA.style.opacity = "0";
+          submitAlert.textContent = "";
+        } else {
+          exclamationI.style.opacity = "1";
+          checkI.style.opacity = "0";
+          imagenA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
+        }
+        break;
+    }
+  };
+
+  input.forEach((input) => {
+    input.addEventListener("keyup", valForm);
+    input.addEventListener("blur", valForm);
+  });
+  textarea.forEach((textarea) => {
+    textarea.addEventListener("keyup", valForm);
+    textarea.addEventListener("blur", valForm);
+  });
   //  Add cel
   const [marca, setMarca] = useState("");
   const [referencia, setReferencia] = useState("");
@@ -131,10 +130,16 @@ const AgregarCel = () => {
   const celCard = collection(dataBase, "Admin-celulares");
 
   const store = async (e) => {
-    if (!vLetras.test(vMarca.value)||!vLetrasyNum.test(vReferencia.value)||!vLetrasyNum.test(vCaracteristicas.value)||!vNumeros.test(vPrecio.value)||!vUrl.test(vImagen.value)) {
-      e.preventDefault()
+    if (
+      !vLetras.test(vMarca.value) ||
+      !vLetrasyNum.test(vReferencia.value) ||
+      !vLetrasyNum.test(vCaracteristicas.value) ||
+      !vNumeros.test(vPrecio.value) ||
+      !vUrl.test(vImagen.value)
+    ) {
+      e.preventDefault();
     } else {
-      e.preventDefault()
+      e.preventDefault();
       await addDoc(celCard, {
         marca: marca,
         referencia: referencia,
@@ -149,7 +154,7 @@ const AgregarCel = () => {
   return (
     /*  Estructura de la tabla */
     <section className="contenedor-principal">
-      <div className="divFondo min-h-[100vh]">
+      <div className="divFondo "></div>
       <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
         Agregar Celulares
       </h1>
@@ -253,15 +258,16 @@ const AgregarCel = () => {
             {/* BOTON AGREGAR */}
             <p id="submit-alert"></p>
             <div className="cel-but">
-            <button type="submit" className="btnAgregar">
-              Agregar
-            </button>
-            <Link className="cel-cancel" to="/celulares">Cancelar</Link>
+              <button type="submit" className="btnAgregar">
+                Agregar
+              </button>
+              <Link className="cel-cancel" to="/celulares">
+                Cancelar
+              </Link>
             </div>
           </form>
         </section>
       </section>
-      </div>
     </section>
   );
 };
