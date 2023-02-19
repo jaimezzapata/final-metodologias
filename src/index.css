@@ -20,10 +20,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 110%;
+  height: 150%;
   background: #000428;
-  background: -webkit-linear-gradient(to bottom, #004e92, #000428);
-  background: linear-gradient(to bottom, #004e92, #000428);
+  background: -webkit-linear-gradient(to bottom, #000428, #004e92);
+  background: linear-gradient(to bottom, #000428, #004e92);
   transform-origin: 0px 0px;
   transform: skewY(-6deg);
   overflow: hidden;
@@ -86,7 +86,7 @@
   justify-content: end;
   align-items: center;
   list-style: none;
-  gap: 30px;
+  gap: 60px;
   margin: 7px;
 }
 .container-header li a {
@@ -95,54 +95,43 @@
 }
 .container-header a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   color: white;
+  transition: all 0.3s;
 }
 .container-header a:hover {
-  color: rgb(211, 211, 211);
+  color: rgb(140, 46, 247);
+  font-weight: 700;
 }
 .sesion {
   border-radius: 20px;
-  padding: 7px;
-  border: 2px blue solid;
-  box-shadow: 2px 2px 2px rgb(55, 55, 55);
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px #1563ff solid;
+  color: #1563ff !important;
+  font-weight: 800;
 }
 .sesion:hover {
-  box-shadow: 0px 0px 10px blue;
-  text-shadow: 0px 0px 10px blue;
+  box-shadow: 0px 0px 10px rgb(46, 141, 250);
+  color: #9d48ff !important;
+  text-shadow: 0px 0px 10px rgb(149, 55, 255);
 }
 .sesion.active {
-  box-shadow: 0px 0px 20px blue;
+  box-shadow: 0px 0px 20px rgb(65, 65, 254);
   text-shadow: 0px 0px 20px blue;
 }
 
-/* Container general */
-
-.contenedor-principal {
-  width: 100%;
-}
-
-/*Home*/
 .main {
-  width: 90%;
-  margin: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.main p {
-  width: 50%;
-  margin: 15px;
-}
-.main h4 {
-  padding: 15px;
-  width: 450px;
+  width: 430px;
   height: 40px;
   text-align: center;
-  background-color: lightblue;
-  border-radius: 15px;
-  color: white;
-  margin-bottom: 60px;
+  background-color: #063289;
+  border-radius: 30px;
+  color: #40ddff;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 .main h1 {
   font-size: 35px;
@@ -162,15 +151,22 @@
   width: 50%;
 }
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+.BtnImg {
   width: 200px;
   padding: 10px;
   text-align: center;
-  background-color: lightblue;
-  border-radius: 15px;
+  background-color: #1563ff;
+  font-weight: 800;
+  border-radius: 30px;
   color: white;
-  margin-left: 300px;
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.BtnImg:hover {
+  box-shadow: 0px 0px 15px 10px #2ea1ff;
 }

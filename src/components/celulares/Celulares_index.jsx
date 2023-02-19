@@ -54,7 +54,11 @@ const Celulares_index = () => {
     <section className="contenedor-principal">
       <Header />
       <div className="divFondo "></div>
-      <section className="celulares-container md:mx-0 mx-10">
+      <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] p-5 mt-10 text-center text-stone-300 uppercase -mb-20">
+        Celulares disponibles
+      </h1>
+
+      <section className="celulares-container md:mx-0 mx-10 ">
         {/* Datos de la tabla */}
         <section className="listado-celulares ">
           {celulares.map((celular) => (
@@ -62,10 +66,10 @@ const Celulares_index = () => {
               <div className="cel-subcont">
                 {/*LAS CARDS */}
 
-                <div class="wrapper">
-                  <div class="overviewInfo">
-                    <div class="actions">
-                      <div class="backbutton ">
+                <div className="wrapper">
+                  <div className="overviewInfo">
+                    <div className="actions">
+                      <div className="backbutton ">
                         <svg
                           width="24"
                           height="24"
@@ -74,7 +78,7 @@ const Celulares_index = () => {
                           xmlns="http://www.w3.org/2000/svg"
                         ></svg>
                       </div>
-                      <div class="cartbutton neurobutton">
+                      <div className="cartbutton neurobutton">
                         <svg
                           width="24"
                           height="24"
@@ -100,23 +104,23 @@ const Celulares_index = () => {
                       </div>
                     </div>
 
-                    <div class="productinfo">
-                      <div class="grouptext">
+                    <div className="productinfo">
+                      <div className="grouptext">
                         <h3>MARCA:</h3>
                         <p>{celular.marca}</p>
                       </div>
-                      <div class="grouptext">
+                      <div className="grouptext">
                         <h3>REFERENCIA:</h3>
                         <p>{celular.referencia}</p>
                       </div>
-                      <div class="grouptext">
+                      <div className="grouptext">
                         <h3>PRECIO:</h3>
                         <p>{celular.precio}</p>
                       </div>
                     </div>
                   </div>
 
-                  <div class="productImage">
+                  <div className="productImage">
                     <img
                       src={`${celular.imagen}`}
                       alt="Telefono"
@@ -124,12 +128,12 @@ const Celulares_index = () => {
                     />
                   </div>
 
-                  <div class="productSpecifications">
+                  <div className="productSpecifications">
                     <h1 className="TitleCard">Caracteristicas</h1>
                     <p>{celular.caracteristicas}</p>
 
-                    <div class="checkoutButton">
-                      <div class="priceTag">
+                    <div className="checkoutButton">
+                      <div className="priceTag">
                         <span>
                           <button onClick={() => confirEliminar(celular.id)}>
                             <i className="fa-solid fa-trash"></i>
@@ -142,9 +146,9 @@ const Celulares_index = () => {
                           className="fa-solid fa-pen-to-square "
                         ></Link>
                       </div>
-                      <button class="preorder">
+                      <button className="preorder">
                         <p>Ordenar</p>
-                        <div class="buttonaction">
+                        <div className="buttonaction">
                           <svg
                             width="24"
                             height="24"

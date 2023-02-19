@@ -1,12 +1,5 @@
 /* Section de fondo degradado cortado */
 
-.divFondo {
-  background: #000428;
-  background: -webkit-linear-gradient(to bottom, #004e92, #000428);
-  background: linear-gradient(to bottom, #004e92, #000428);
-  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
-}
-
 /* Parametro cards */
 
 .celulares-container {
