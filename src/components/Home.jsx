@@ -6,11 +6,14 @@ const Home = () => {
   return (
     <section>
       <Header />
+
       <section className="main">
-        <h4>El mejor contenido para tu smartphone.</h4>      
-          <div className="container-p">  
+        <h4>El mejor contenido para tu smartphone.</h4>
+        <div className="container-p">
           <p>
-          <h1>Encuentra tu mejor estilo <br /> para tu smartphone.</h1>
+            <h1>
+              Encuentra tu mejor estilo <br /> para tu smartphone.
+            </h1>
             Somos una tienda en línea que ofrece una amplia variedad de
             dispositivos móviles de última generación, así como una gran
             selección de accesorios para personalizar y proteger tu dispositivo.{" "}
@@ -30,8 +33,7 @@ const Home = () => {
             su experiencia móvil.
           </p>
           <img className="img1" src={logo} alt="" />
-          </div>
-
+        </div>
       </section>
       <div className="button">
         <input type="button" value="Contactanos" />

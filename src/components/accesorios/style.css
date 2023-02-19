@@ -124,7 +124,7 @@ Degradado de la parte donde esta Marca... Etc */
   -webkit-animation: updowncontroller infinite 7s alternate;
 }
 
-img {
+.productImage img {
   margin-left: 30px;
   width: 100%;
   height: auto;
@@ -135,7 +135,7 @@ img {
   -o-transition: ease 5s all;
 }
 
-img:hover {
+.productImage img:hover {
   transition: ease 2s all;
   animation: none;
   transform: rotate(-0deg) translate(-0px, 66px);
