@@ -7,11 +7,8 @@ import Accesorios_index from "./components/accesorios/Accesorios_index";
 import Celulares_index from "./components/celulares/Celulares_index";
 import Login_index from "./components/login/Login_index";
 import AgregarCel from "./components/celulares/AgregarCel";
-<<<<<<< HEAD
-=======
 import AgregarAcc from "./components/accesorios/AgregarAcc";
 import Header from "./helper/Header";
->>>>>>> be4b777fec5c96decc72bb972dc05ef1c071709f
 import EditarCel from "./components/celulares/EditarCel";
 import EditarAcc from "./components/accesorios/EditarAcc";
 
@@ -55,10 +52,6 @@ const router = createBrowserRouter([
     element: <EditarCel />,
     errorElement: <Error404 />,
   },
-<<<<<<< HEAD
-=======
-
-  
   {
     path: "/edit-acc/:id",
     element: <EditarAcc />,
@@ -70,9 +63,7 @@ const router = createBrowserRouter([
     element: <Header />,
     errorElement: <Error404 />,
   },
->>>>>>> be4b777fec5c96decc72bb972dc05ef1c071709f
-]);
-
+])
 const App = () => {
   return <RouterProvider router={router} />;
 };
