@@ -8,119 +8,118 @@ import { async } from "@firebase/util";
 /* Creacion de funciones */
 
 const EditarCel = () => {
-
   // Validacion
 
-  const input = document.querySelectorAll('#form input')
-  const textarea = document.querySelectorAll('#form textarea')
-  const submitAlert = document.getElementById('submit-alert')
-  const vMarca = document.getElementById('marca');
-  const vReferencia = document.getElementById('referencia');
-  const vPrecio = document.getElementById('precio');
-  const vCaracteristicas = document.getElementById('caracteristicas');
-  const vImagen = document.getElementById('imagen');
-  const marcaA = document.getElementById('marca-alert');
-  const referenciaA = document.getElementById('referencia-alert');
-  const precioA = document.getElementById('precio-alert');
-  const caracteristicasA = document.getElementById('carac-alert');
-  const imagenA = document.getElementById('imagen-alert');
-  const check = document.getElementById('check')
-  const exclamation = document.getElementById('exclamation')
-  const checkR = document.getElementById('checkR')
-  const exclamationR = document.getElementById('exclamationR')
-  const checkP = document.getElementById('checkP')
-  const exclamationP = document.getElementById('exclamationP')
-  const checkC = document.getElementById('checkC')
-  const exclamationC = document.getElementById('exclamationC')
-  const checkI = document.getElementById('checkI')
-  const exclamationI = document.getElementById('exclamationI')
+  const input = document.querySelectorAll("#form input");
+  const textarea = document.querySelectorAll("#form textarea");
+  const submitAlert = document.getElementById("submit-alert");
+  const vMarca = document.getElementById("marca");
+  const vReferencia = document.getElementById("referencia");
+  const vPrecio = document.getElementById("precio");
+  const vCaracteristicas = document.getElementById("caracteristicas");
+  const vImagen = document.getElementById("imagen");
+  const marcaA = document.getElementById("marca-alert");
+  const referenciaA = document.getElementById("referencia-alert");
+  const precioA = document.getElementById("precio-alert");
+  const caracteristicasA = document.getElementById("carac-alert");
+  const imagenA = document.getElementById("imagen-alert");
+  const check = document.getElementById("check");
+  const exclamation = document.getElementById("exclamation");
+  const checkR = document.getElementById("checkR");
+  const exclamationR = document.getElementById("exclamationR");
+  const checkP = document.getElementById("checkP");
+  const exclamationP = document.getElementById("exclamationP");
+  const checkC = document.getElementById("checkC");
+  const exclamationC = document.getElementById("exclamationC");
+  const checkI = document.getElementById("checkI");
+  const exclamationI = document.getElementById("exclamationI");
 
-
-  const vLetras = /^[A-Za-z]{1,20}$/
-  const vLetrasyNum = /^[a-zA-Z0-9]{1,20}$/
-  const vNumeros = /[^a-z ]\ *([.0-9])*\d/
-  const vUrl = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig
+  const vLetras = /^[A-Za-z]{1,20}$/;
+  const vLetrasyNum = /^[a-zA-Z0-9]{1,20}$/;
+  const vNumeros = /[^a-z ]\ *([.0-9])*\d/;
+  const vUrl =
+    /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
 
   const valForm = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     switch (e.target.name) {
       case "marca":
-        if (vLetras.test(e.target.value)){
-          check.style.opacity = '1'
-          exclamation.style.opacity = '0'
-          marcaA.style.opacity = '0'
-          submitAlert.textContent = ''
+        if (vLetras.test(e.target.value)) {
+          check.style.opacity = "1";
+          exclamation.style.opacity = "0";
+          marcaA.style.opacity = "0";
+          submitAlert.textContent = "";
         } else {
-          exclamation.style.opacity = '1'
-          check.style.opacity = '0'
-          marcaA.style.opacity = '1'
-          submitAlert.textContent = 'Rellene los campos correctamente.'
+          exclamation.style.opacity = "1";
+          check.style.opacity = "0";
+          marcaA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
         }
-      break;
+        break;
       case "referencia":
-        if (vLetrasyNum.test(e.target.value)){
-          checkR.style.opacity = '1'
-          exclamationR.style.opacity = '0'
-          referenciaA.style.opacity = '0'
-          submitAlert.textContent = ''
+        if (vLetrasyNum.test(e.target.value)) {
+          checkR.style.opacity = "1";
+          exclamationR.style.opacity = "0";
+          referenciaA.style.opacity = "0";
+          submitAlert.textContent = "";
         } else {
-          exclamationR.style.opacity = '1'
-          checkR.style.opacity = '0'
-          referenciaA.style.opacity = '1'
-          submitAlert.textContent = 'Rellene los campos correctamente.'
+          exclamationR.style.opacity = "1";
+          checkR.style.opacity = "0";
+          referenciaA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
         }
-      break;
+        break;
       case "precio":
-        if (vNumeros.test(e.target.value)){
-          checkP.style.opacity = '1'
-          exclamationP.style.opacity = '0'
-          precioA.style.opacity = '0'
-          submitAlert.textContent = ''
+        if (vNumeros.test(e.target.value)) {
+          checkP.style.opacity = "1";
+          exclamationP.style.opacity = "0";
+          precioA.style.opacity = "0";
+          submitAlert.textContent = "";
         } else {
-          exclamationP.style.opacity = '1'
-          checkP.style.opacity = '0'
-          precioA.style.opacity = '1'
-          submitAlert.textContent = 'Rellene los campos correctamente.'
+          exclamationP.style.opacity = "1";
+          checkP.style.opacity = "0";
+          precioA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
         }
-      break;
+        break;
       case "caracteristicas":
-        if (vLetrasyNum.test(e.target.value)){
-          checkC.style.opacity = '1'
-          exclamationC.style.opacity = '0'
-          caracteristicasA.style.opacity = '0'
-          submitAlert.textContent = ''
+        if (vLetrasyNum.test(e.target.value)) {
+          checkC.style.opacity = "1";
+          exclamationC.style.opacity = "0";
+          caracteristicasA.style.opacity = "0";
+          submitAlert.textContent = "";
         } else {
-          exclamationC.style.opacity = '1'
-          checkC.style.opacity = '0'
-          caracteristicasA.style.opacity = '1'
-          submitAlert.textContent = 'Rellene los campos correctamente.'
+          exclamationC.style.opacity = "1";
+          checkC.style.opacity = "0";
+          caracteristicasA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
         }
-      break;
+        break;
       case "imagen":
-        if (vUrl.test(e.target.value)){
-          checkI.style.opacity = '1'
-          exclamationI.style.opacity = '0'
-          imagenA.style.opacity = '0'
-          submitAlert.textContent = ''
+        if (vUrl.test(e.target.value)) {
+          checkI.style.opacity = "1";
+          exclamationI.style.opacity = "0";
+          imagenA.style.opacity = "0";
+          submitAlert.textContent = "";
         } else {
-          exclamationI.style.opacity = '1'
-          checkI.style.opacity = '0'
-          imagenA.style.opacity = '1'
-          submitAlert.textContent = 'Rellene los campos correctamente.'
+          exclamationI.style.opacity = "1";
+          checkI.style.opacity = "0";
+          imagenA.style.opacity = "1";
+          submitAlert.textContent = "Rellene los campos correctamente.";
         }
-      break;
+        break;
     }
-  }
+  };
 
   input.forEach((input) => {
-    input.addEventListener("keyup", valForm)
-    input.addEventListener("blur", valForm)
-  })
+    input.addEventListener("keyup", valForm);
+    input.addEventListener("blur", valForm);
+  });
   textarea.forEach((textarea) => {
-    textarea.addEventListener("keyup", valForm)
-    textarea.addEventListener("blur", valForm)
-  })
- //  Add cel
+    textarea.addEventListener("keyup", valForm);
+    textarea.addEventListener("blur", valForm);
+  });
+  //  Add cel
   const [marca, setMarca] = useState("");
   const [referencia, setReferencia] = useState("");
   const [precio, setPrecio] = useState(0);
@@ -137,13 +136,19 @@ const EditarCel = () => {
       referencia: referencia,
       precio: precio,
       caracteristicas: caracteristicas,
-      imagen: imagen
+      imagen: imagen,
     };
-    if (!vLetras.test(vMarca.value)||!vLetrasyNum.test(vReferencia.value)||!vLetrasyNum.test(vCaracteristicas.value)||!vNumeros.test(vPrecio.value)||!vUrl.test(vImagen.value)) {
-      e.preventDefault()
+    if (
+      !vLetras.test(vMarca.value) ||
+      !vLetrasyNum.test(vReferencia.value) ||
+      !vLetrasyNum.test(vCaracteristicas.value) ||
+      !vNumeros.test(vPrecio.value) ||
+      !vUrl.test(vImagen.value)
+    ) {
+      e.preventDefault();
     } else {
-    await updateDoc(admin, data);
-    navigate("/celulares");
+      await updateDoc(admin, data);
+      navigate("/celulares");
     }
   };
 
@@ -154,7 +159,7 @@ const EditarCel = () => {
       setReferencia(dataCell.data().referencia);
       setPrecio(dataCell.data().precio);
       setCaracteristicas(dataCell.data().caracteristicas);
-      setImagen(dataCell.data(),imagen);
+      setImagen(dataCell.data(), imagen);
     } else {
     }
   };
@@ -165,16 +170,18 @@ const EditarCel = () => {
 
   return (
     /*  Estructura de la tabla */
-    <section className="divFondo min-h-[100vh]">
-          <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
-            Editar consulta de celulares
-          </h1>
+    <section>
+      <div className="divFondo "></div>
+      <h1 className="text-3xl xl:text-5xl font-bold tracking-[3px] m-auto p-5 text-center text-stone-300 uppercase">
+        Editar consulta de celulares
+      </h1>
       <section className="celulares-container md:mx-0 mx-10">
         <section className="formCell p-5 ">
-
           <form id="form" className="w-full max-w-2xl  m-10 " onSubmit={update}>
             <div className="contenedorForm">
-              <label className="text-gray-300 block uppercase font-bold mb-2 ">Marca:</label>
+              <label className="text-gray-300 block uppercase font-bold mb-2 ">
+                Marca:
+              </label>
               <input
                 name="marca"
                 id="marca"
@@ -191,7 +198,9 @@ const EditarCel = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="text-gray-300 block uppercase font-bold mb-2 ">Referencia:</label>
+              <label className="text-gray-300 block uppercase font-bold mb-2 ">
+                Referencia:
+              </label>
               <input
                 name="referencia"
                 id="referencia"
@@ -208,7 +217,9 @@ const EditarCel = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="text-gray-300 block uppercase font-bold mb-2 ">Precio:</label>
+              <label className="text-gray-300 block uppercase font-bold mb-2 ">
+                Precio:
+              </label>
               <input
                 name="precio"
                 id="precio"
@@ -225,7 +236,9 @@ const EditarCel = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="text-gray-300 block uppercase font-bold mb-2 ">Caracteristicas:</label>
+              <label className="text-gray-300 block uppercase font-bold mb-2 ">
+                Caracteristicas:
+              </label>
               <textarea
                 name="caracteristicas"
                 id="caracteristicas"
@@ -242,7 +255,9 @@ const EditarCel = () => {
             </div>
 
             <div className="contenedorForm">
-              <label className="text-gray-300 block uppercase font-bold mb-2 ">Imagen:</label>
+              <label className="text-gray-300 block uppercase font-bold mb-2 ">
+                Imagen:
+              </label>
               <input
                 name="imagen"
                 id="imagen"
@@ -260,10 +275,12 @@ const EditarCel = () => {
             {/* boton actualizar */}
             <p id="submit-alert"></p>
             <div className="cel-but">
-            <button type="submit" className="btnAgregar">
-              Actualizar
-            </button>
-            <Link className="cel-cancel" to="/celulares">Cancelar</Link>
+              <button type="submit" className="btnAgregar">
+                Actualizar
+              </button>
+              <Link className="cel-cancel" to="/celulares">
+                Cancelar
+              </Link>
             </div>
           </form>
         </section>

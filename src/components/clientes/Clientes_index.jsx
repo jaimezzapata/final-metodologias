@@ -5,8 +5,6 @@ import { dataBase } from "../../firebase/dataBase";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-
-
 const MySwal = withReactContent(Swal);
 
 // ontener informacion de la base de datos y la tabla
@@ -21,15 +19,15 @@ const Clientes_index = () => {
     console.log(clientes);
   };
 
-   /// Funcion para eliminar datos
-   const eliminarCliente = async (id) => {
+  /// Funcion para eliminar datos
+  const eliminarCliente = async (id) => {
     const clientDelete = doc(dataBase, "Admin-clientes", id);
     await deleteDoc(clientDelete);
     listarClientes();
   };
 
-   /*  funcion  del modal de eliminar */
-   const confirEliminar = (id) => {
+  /*  funcion  del modal de eliminar */
+  const confirEliminar = (id) => {
     Swal.fire({
       title: "Esta seguro que quieres Eliminar?",
       text: "Si eliminas esto, no tendrá reversa!",
@@ -51,27 +49,21 @@ const Clientes_index = () => {
     listarClientes();
   }, []);
 
-
-
-
   return (
-    <section className="divFondo min-h-[100vh] ">
+    <section>
+      <div className="divFondo "></div>
       <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}
         <section className="listado-celulares ">
-        {clientes.map((cliente) => (
+          {clientes.map((cliente) => (
             <div key={cliente.id} className="cel-card">
               <div className="cel-subcont">
                 {/* OTRA FORMA DE MOSTRAR LAS CARDS */}
 
-
                 {/*inicio targeta */}
                 <div class="wrapper">
                   <div class="overviewInfo">
-                    
-
                     <div class="productinfo">
-
                       <div class="grouptext">
                         <h3>direccion:</h3>
                         <p>{cliente.direccion}</p>
@@ -84,14 +76,9 @@ const Clientes_index = () => {
                         <h3>primerApellido:</h3>
                         <p>{cliente.primer_apellido}</p>
                       </div>
-
                     </div>
                   </div>
                   {/* fin targeta */}
-                  
-
-
-   
                 </div>
               </div>
             </div>
@@ -102,6 +89,4 @@ const Clientes_index = () => {
   );
 };
 
-
-
-export default Clientes_index
+export default Clientes_index;

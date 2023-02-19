@@ -66,6 +66,7 @@ const Accesorios_index = () => {
 
   return (
     <section className="contenedor-principal">
+      <div className="divFondo "></div>
       <Header />
       <section className="accesorios-container">
         <Link to="/add-acc">Agregar Nuevo Accesorio</Link>

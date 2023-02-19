@@ -53,14 +53,14 @@ const Celulares_index = () => {
   return (
     <section className="contenedor-principal">
       <Header />
-      <div className="divFondo min-h-[100vh]"></div>
+      <div className="divFondo "></div>
       <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}
         <section className="listado-celulares ">
           {celulares.map((celular) => (
             <div key={celular.id} className="cel-card">
               <div className="cel-subcont">
-                {/* OTRA FORMA DE MOSTRAR LAS CARDS */}
+                {/*LAS CARDS */}
 
                 <div class="wrapper">
                   <div class="overviewInfo">
