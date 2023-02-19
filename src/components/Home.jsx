@@ -4,7 +4,7 @@ import Header from "../helper/Header";
 
 const Home = () => {
   return (
-    <section className="container">
+    <section>
       <Header />
       <section className="main">
         <h4>El mejor contenido para tu smartphone.</h4>      

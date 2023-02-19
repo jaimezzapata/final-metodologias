@@ -21,6 +21,7 @@ import { dataBase } from "../../firebase/dataBase";
 ///Componentes de alerta
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import Header from "../../helper/Header";
 
 const MySwal = withReactContent(Swal);
 
@@ -64,7 +65,8 @@ const Accesorios_index = () => {
   }, []);
 
   return (
-    <section className="container">
+    <section className="contenedor-principal">
+      <Header />
       <section className="accesorios-container">
         <Link to="/add-acc">Agregar Nuevo Accesorio</Link>
 
