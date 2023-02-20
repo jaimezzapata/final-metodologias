@@ -101,6 +101,28 @@ Degradado de la parte donde esta Marca... Etc */
   color: rgb(217, 217, 217);
 }
 
+.scroll-caracteristicas{
+  overflow-y: scroll;
+  height: 80px;
+}
+
+.scroll-caracteristicas::-webkit-scrollbar{
+  background: none;
+  width: 10px;
+}
+
+.scroll-caracteristicas::-webkit-scrollbar-button{
+  display: none;
+}
+
+.scroll-caracteristicas::-webkit-scrollbar-thumb{
+  background: white;
+  border-radius: 20px;
+}
+
+.scroll-caracteristicas::-webkit-scrollbar-thumb:hover{
+  background: rgb(170, 170, 170);
+}
 /* Caracteristicas de la imagen con movimiento */
 
 .productImage {
