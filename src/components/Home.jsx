@@ -5,7 +5,7 @@ import FormLogin from "./login/FormLogin";
 
 const Home = () => {
   return (
-    <section>
+    <section className="pb-20">
       <div className="divFondo"></div>
       <Header />
       <div className="main mt-[10%] ml-[4%] mb-5 ">
@@ -54,10 +54,12 @@ const Home = () => {
         </div>
         {/* ///FORMULARIO  */}
       </section>
-      <div className="formDetras ml-[36.4%] -mt-6"></div>
+      <div className="container-formSesion">
+      <div className="formDetras ml-[33.4%] mt-[7%]"></div>
       <div className="formHome -mt-[15%]">
         {" "}
         <FormLogin />{" "}
+      </div>
       </div>
     </section>
   );

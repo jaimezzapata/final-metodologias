@@ -123,6 +123,7 @@ Degradado de la parte donde esta Marca... Etc */
 .scroll-caracteristicas::-webkit-scrollbar-thumb:hover{
   background: rgb(170, 170, 170);
 }
+
 /* Caracteristicas de la imagen con movimiento */
 
 .productImage {

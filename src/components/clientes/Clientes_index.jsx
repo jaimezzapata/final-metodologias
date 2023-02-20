@@ -127,6 +127,9 @@ const Clientes_index = () => {
           ))}
         </section>
       </section>
+      <Link to="/add-client" className="add-cel ml-40 bg-red-600">
+        <i class="fa-solid fa-plus"></i><h1>Agregar nuevo cliente</h1>
+      </Link>
     </section>
   );
 };
