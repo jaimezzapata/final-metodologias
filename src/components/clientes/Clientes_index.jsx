@@ -4,6 +4,9 @@ import { collection, doc, getDocs, deleteDoc } from "firebase/firestore";
 import { dataBase } from "../../firebase/dataBase";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import "./clientess.css"
+import Header from "../../helper/Header";
+import icon_cliente from "../../assets/icon_cliente.png"
 
 const MySwal = withReactContent(Swal);
 
@@ -51,6 +54,7 @@ const Clientes_index = () => {
 
   return (
     <section>
+      <Header />
       <div className="divFondo "></div>
       <section className="celulares-container md:mx-0 mx-10">
         {/* Datos de la tabla */}
@@ -60,69 +64,64 @@ const Clientes_index = () => {
               <div className="cel-subcont">
                 {/* OTRA FORMA DE MOSTRAR LAS CARDS */}
 
-                {/*inicio targeta */}
-                <div class="wrapper">
+                <div class="wrapper targeta_client"> {/*inicio targeta */}
                   <div class="overviewInfo">
                     <div class="productinfo">
-                      <div class="grouptext">
-                        <h3>Primer nombre:</h3>
-                        <p>{cliente.primer_nombre}</p>
-                      </div>
-                      <div class="grouptext">
-                        <h3>Segundo nombre:</h3>
-                        <p>{cliente.segundo_nombre}</p>
-                      </div>
-                      <div class="grouptext">
-                        <h3>Primer apellido:</h3>
-                        <p>{cliente.primer_apellido}</p>
-                      </div>
 
-                      <div class="grouptext">
-                        <h3>Segundo apellido:</h3>
-                        <p>{cliente.segundo_apellido}</p>
-                      </div>
-                      <div class="grouptext">
-                        <h3>Telefono</h3>
-                        <p>{cliente.telefono}</p>
-                      </div>
-                      <div class="grouptext">
-                        <h3>Direccion</h3>
-                        <p>{cliente.direccion}</p>
-                      </div>
+                      <img src={icon_cliente} alt="" />
+              
+                      <div className="targeta_cont">
+                        <div className="targeta_cont_items">
+                          <div class="grouptext">
+                            <h3>Cliente</h3>
+                            <p>{cliente.primer_nombre} {cliente.segundo_nombre}</p>
+                            <p>{cliente.primer_apellido} {cliente.segundo_apellido}</p>
+                          </div>
+                          <div class="grouptext">
+                             <h3>Direccion</h3>
+                          <p>{cliente.direccion}</p>
+                          </div>
+                          <div className="grouptext">
+                            <h3>Telefono</h3>
+                             <p>{cliente.telefono}</p>
+                          </div>
+                             
+                        </div>
 
+                      </div>
+                        
 
-                      <div class="productSpecifications">
-                      <h1 className="TitleCard">Caracteristicas</h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dolores deserunt obcaecati fuga voluptatem vero odio magni molestiae quis perspiciatis cumque, nobis unde repudiandae itaque! Tenetur est asperiores nostrum molestias!
+                      <div className="acciones_clie">
+                        <div class="checkoutButton ojo"> {/* ↓ acciones ↓ */}
+                          <div class="priceTag">
+                            <span>
+                              <button onClick={() => confirEliminar(cliente.id)}>
+                                <i className="fa-solid fa-trash"></i>
+                              </button>
+                            </span>
+                          </div>
+                          <h2>Eliminar</h2>
+                        </div> {/* ↑ acciones ↑ */}
                       
-
-
-                      {/* ↓ parte inferior targeta ↓ */}
-                      <div class="checkoutButton">
-                      <div class="priceTag">
-                        <span>
-                          <button onClick={() => confirEliminar(cliente.id)}>
-                            <i className="fa-solid fa-trash"></i>
-                          </button>
-                        </span>
-                      </div>
-
-                      <div>
-                        <Link
-                          to={`/edit-cel/${cliente.id}`}
-                          className="fa-solid fa-pen-to-square "
-                        ></Link>
+                        
+                          <div class="checkoutButton ojo"> {/* ↓ acciones ↓ */}
+                            <div>
+                              <Link
+                                to={`/edit-cel/${cliente.id}`}
+                                className="fa-solid fa-pen-to-square "
+                              ></Link>
+                            </div>
+                            <h2>Editar</h2>
+                          </div> {/* ↑ acciones ↑ */}
                       </div>
                       
-                      </div>
-                      {/* ↑ parte inferior targeta ↑ */}
-                      </div>
+                        
+                     
+                      
                     </div>
-
-                    
                   </div>
-                  {/* fin targeta */}
-                </div>
+
+                </div> {/* fin targeta */}
               </div>
             </div>
           ))}
