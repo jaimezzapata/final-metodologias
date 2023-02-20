@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/img-producto.png";
 import Header from "../helper/Header";
+import FormLogin from "./login/FormLogin";
 
 const Home = () => {
   return (
@@ -51,7 +52,13 @@ const Home = () => {
             <button className="BtnImg px-10">Contáctanos</button>
           </a>
         </div>
+        {/* ///FORMULARIO  */}
       </section>
+      <div className="formDetras ml-[36.4%] -mt-6"></div>
+      <div className="formHome -mt-[15%]">
+        {" "}
+        <FormLogin />{" "}
+      </div>
     </section>
   );
 };
