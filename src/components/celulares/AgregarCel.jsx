@@ -230,8 +230,11 @@ const AgregarCel = () => {
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
               ></textarea>
-              <i id="checkC" class="fa-solid fa-check"></i>
-              <i id="exclamationC" class="fa-solid fa-circle-exclamation"></i>
+              <i id="checkC" className="fa-solid fa-check"></i>
+              <i
+                id="exclamationC"
+                className="fa-solid fa-circle-exclamation"
+              ></i>
               <div id="carac-alert" className="exclamation-alert">
                 <p>Solo se permiten letras y números.</p>
               </div>
@@ -249,8 +252,11 @@ const AgregarCel = () => {
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
               />
-              <i id="checkI" class="fa-solid fa-check"></i>
-              <i id="exclamationI" class="fa-solid fa-circle-exclamation"></i>
+              <i id="checkI" className="fa-solid fa-check"></i>
+              <i
+                id="exclamationI"
+                className="fa-solid fa-circle-exclamation"
+              ></i>
               <div id="imagen-alert" className="exclamation-alert">
                 <p>Solo se permiten urls.</p>
               </div>
