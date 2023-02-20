@@ -73,33 +73,21 @@ const Clientes_index = () => {
                       <div className="targeta_cont">
                         <div className="targeta_cont_items">
                           <div class="grouptext">
-                            <h3>Primer nombre</h3>
-                            <p>{cliente.primer_nombre}</p>
+                            <h3>Cliente</h3>
+                            <p>{cliente.primer_nombre} {cliente.segundo_nombre}</p>
+                            <p>{cliente.primer_apellido} {cliente.segundo_apellido}</p>
                           </div>
                           <div class="grouptext">
-                            <h3>Primer apellido</h3>
-                            <p>{cliente.primer_apellido}</p>
+                             <h3>Direccion</h3>
+                          <p>{cliente.direccion}</p>
                           </div>
-                          <div class="grouptext">
+                          <div className="grouptext">
                             <h3>Telefono</h3>
-                            <p>{cliente.telefono}</p>
+                             <p>{cliente.telefono}</p>
                           </div>
+                             
                         </div>
 
-                        <div className="targeta_cont_items">
-                          <div class="grouptext">
-                            <h3>Segundo nombre</h3>
-                            <p>{cliente.segundo_nombre}</p>
-                          </div>
-                          <div class="grouptext">
-                            <h3>Segundo apellido</h3>
-                            <p>{cliente.segundo_apellido}</p>
-                          </div>
-                          <div class="grouptext">
-                            <h3>Direccion</h3>
-                            <p>{cliente.direccion}</p>
-                          </div>
-                        </div>
                       </div>
                         
 
