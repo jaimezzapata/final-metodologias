@@ -8,12 +8,12 @@ const Home = () => {
     <section>
       <div className="divFondo"></div>
       <Header />
-      <div className="main mt-[10%] ml-[7%] mb-5 ">
+      <div className="main mt-[10%] ml-[4%] mb-5 ">
         <p className="font-bold p-2 ">
           ✦⭑ El mejor contenido para tu smartphone.
         </p>
       </div>
-      <section className="container h-[90vh] grid grid-cols-1 md:grid-cols-8 -mt-[8%] m-20">
+      <section className="container h-[90vh] grid grid-cols-1 md:grid-cols-8 -mt-[8%] m-10">
         <section className="md:col-span-5 flex items-center justify-center ">
           <div className="">
             <h1 className="text-6xl text-white m-5 mt-[12%]">
@@ -44,7 +44,7 @@ const Home = () => {
         <section className="md:col-span-3">
           <img className="pt-10" src={logo} alt="" />
         </section>
-        <div className="-mt-10 ml-40 ">
+        <div className="-mt-0 ml-[160%] ">
           <a
             target="_blank"
             href="https://github.com/jaimezzapata/final-metodologias"

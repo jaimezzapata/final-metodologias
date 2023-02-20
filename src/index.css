@@ -13,6 +13,27 @@
   font-family: "JetBrains Mono", monospace;
 }
 
+/* Scrollbar */
+
+body::-webkit-scrollbar{
+  background: rgba(77, 77, 77, 0.719);
+  width: 12px;
+}
+
+body::-webkit-scrollbar-button{
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: rgb(27, 26, 26);
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+  background: black;
+  border: 1px solid white;
+}
+
 /* Section de fondo degradado cortado */
 
 .divFondo {

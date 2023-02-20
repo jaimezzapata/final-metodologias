@@ -130,7 +130,7 @@ const Celulares_index = () => {
 
                   <div className="productSpecifications">
                     <h1 className="TitleCard">Caracteristicas</h1>
-                    <p>{celular.caracteristicas}</p>
+                    <p className="scroll-caracteristicas">{celular.caracteristicas}</p>
 
                     <div className="checkoutButton">
                       <div className="priceTag">
