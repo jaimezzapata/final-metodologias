@@ -1,0 +1,55 @@
+
+.targeta_client {
+  width: auto;
+}
+
+.targeta_client .productinfo {
+  margin-bottom: 10px;
+  
+}
+
+.targeta_cont {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.targeta_cont_items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ojo {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  gap: 15px;
+
+}
+
+.ojo:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+
+  background-image: linear-gradient( to bottom, #000341, #011458, #052371, #06328a, #0042a5 );
+}
+
+.acciones_clie {
+  display: flex;
+}
+
+.targeta_client img{
+  width: 70px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #0042a50b;
+}
+
+
+
+
+
+
