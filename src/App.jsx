@@ -56,7 +56,7 @@ const router = createBrowserRouter([
     errorElement: <Error404 />,
   },
   {
-    path: "/addclient",
+    path: "/add-client",
     element: <AgregarClient />,
     errorElement: <Error404 />,
   },

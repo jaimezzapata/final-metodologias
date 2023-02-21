@@ -1,6 +1,55 @@
-import React from 'react'
+  
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { getDoc, updateDoc, doc } from "firebase/firestore";
+import { dataBase } from "../../firebase/dataBase";
+import { async } from "@firebase/util";
+
 
 const EditarClient = () => {
+  
+  const [primer_nombre, setPrimer_nombre] = useState("");
+   const [segundo_nombre, setSegundo_nombre] = useState("");
+   const [primer_apellido, setPrimer_apellido] = useState("");
+   const [segundo_apellido, setSegundo_apellido] = useState("");
+   const [direccion, setDireccion] = useState("");
+   const [telefono, setTelefono] = useState("");
+   const navigate = useNavigate();
+   const { id } = useParams();
+
+  const update = async (e) => {
+    e.preventDefault();
+    const admin = doc(dataBase, "Admin-clientes", id);
+    const data = {
+      primer_nombre: primer_nombre,
+         segundo_nombre: segundo_nombre,
+         primer_apellido: primer_apellido,
+         segundo_apellido: segundo_apellido,
+         direccion: direccion,
+         telefono: telefono,
+    };
+     
+      await updateDoc(admin, data);
+      navigate("/clientes");
+    
+  };
+
+  const tenerDatosId = async (id) => {
+    const dataClient = await getDoc(doc(dataBase, "Admin-clientes", id));
+    if (dataClient.exists()) {
+      setPrimer_nombre(dataClient.data().primer_nombre);
+      setSegundo_nombre(dataClient.data().segundo_nombre);
+      setPrimer_apellido(dataClient.data().primer_apellido);
+      setSegundo_apellido(dataClient.data().segundo_apellido);
+      setDireccion(dataClient.data().direccion);
+      setTelefono(dataClient.data().telefono);
+    } else {
+    }
+  };
+
+  useEffect(() => {
+    tenerDatosId(id);
+  }, []);
   return (
    /*  Estructura de la tabla */
    <section>
@@ -19,7 +68,7 @@ const EditarClient = () => {
              name="primer_nombre"
              id="primer_nombre"
              value={primer_nombre}
-             onChange
+             onChange={(e)=>setPrimer_nombre(e.target.value)}
              type="text"
              className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
            />
@@ -41,7 +90,7 @@ const EditarClient = () => {
              name="segundo_nombre"
              id="segundo_nombre"
              value={segundo_nombre}
-             onChange
+             onChange={(e)=>setSegundo_nombre(e.target.value)}
              type="text"
              className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
            />
@@ -63,7 +112,7 @@ const EditarClient = () => {
              name="primer_apellido"
              id="primer_apellido"
              value={primer_apellido}
-             onChange
+             onChange={(e)=>setPrimer_apellido(e.target.value)}
              type="text"
              className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
            />
@@ -81,11 +130,11 @@ const EditarClient = () => {
            <label className="text-gray-300 block uppercase font-bold mb-2 ">
              Segundo Apellido
            </label>
-           <textarea
+           <input
              name="segundo_apellido"
              id="segundo_apellido"
              value={segundo_apellido}
-             onChange
+             onChange={(e)=>setSegundo_apellido(e.target.value)}
              type="text"
              className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
            />
@@ -108,7 +157,7 @@ const EditarClient = () => {
              name="direccion"
              id="direccion"
              value={direccion}
-             onChange
+             onChange={(e)=>setDireccion(e.target.value)}
              type="text"
              className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
            />
@@ -121,26 +170,16 @@ const EditarClient = () => {
              <p>Solo se permiten urls.</p>
            </div>
          </div>
-         {/* boton actualizar */}
-         <p id="submit-alert"></p>
-         <div className="cel-but">
-           <button type="submit" className="btnAgregar">
-             Actualizar
-           </button>
-           <Link className="cel-cancel" to="/celulares">
-             Cancelar
-           </Link>
-         </div>
 
          <div className="contenedorForm">
            <label className="text-gray-300 block uppercase font-bold mb-2 ">
              Telefono
            </label>
-           <textarea
+           <input
              name="telefono"
              id="telefono"
              value={telefono}
-             onChange
+             onChange={(e)=>setTelefono(e.target.value)}
              type="text"
              className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
            />
@@ -153,6 +192,14 @@ const EditarClient = () => {
              <p>Solo se permiten letras y números.</p>
            </div>
          </div>
+         <div className="cel-but">
+              <button type="submit" className="btnAgregar">
+                Actualizar
+              </button>
+              <Link className="cel-cancel" to="/clientes">
+                Cancelar
+              </Link>
+            </div>
 
        </form>
      </section>

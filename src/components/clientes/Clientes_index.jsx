@@ -107,7 +107,7 @@ const Clientes_index = () => {
                           <div class="checkoutButton ojo"> {/* ↓ acciones ↓ */}
                             <div>
                               <Link
-                                to={`/edit-cel/${cliente.id}`}
+                                to={`/edit-client/${cliente.id}`}
                                 className="fa-solid fa-pen-to-square "
                               ></Link>
                             </div>

@@ -7,12 +7,12 @@ import { dataBase } from "../../firebase/dataBase";
 const AgregarClient = () => {
 
    //  Add cel
-   const [primer_nombre, setprimer_nombre] = useState("");
-   const [segundo_nombre, setsegundo_nombre] = useState("");
-   const [primer_apellido, setprimer_apellido] = useState("");
-   const [segundo_apellido, setsegundo_apellido] = useState("");
-   const [direccion, setdireccion] = useState("");
-   const [telefono, settelefono] = useState("");
+   const [primer_nombre, setPrimer_nombre] = useState("");
+   const [segundo_nombre, setSegundo_nombre] = useState("");
+   const [primer_apellido, setPrimer_apellido] = useState("");
+   const [segundo_apellido, setSegundo_apellido] = useState("");
+   const [direccion, setDireccion] = useState("");
+   const [telefono, setTelefono] = useState("");
 
    const navigate = useNavigate();
  
@@ -41,7 +41,7 @@ const AgregarClient = () => {
       </h1>
       <section className=" celulares-container md:mx-0 mx-10 ">
         <section className="formCell p-5  ">
-          <form id="form" className="w-full max-w-2xl  m-10 ">
+          <form id="form" className="w-full max-w-2xl  m-10 "onSubmit={addclient}>
             <div className="contenedorForm ">
               <label className="text-gray-300 block uppercase font-bold mb-2 ">
                 Primer Nombre
@@ -50,7 +50,7 @@ const AgregarClient = () => {
                 name="primer_nombre"
                 id="primer_nombre"
                 value={primer_nombre}
-                onChange
+                onChange={(e) => setPrimer_nombre(e.target.value)}
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
               />
@@ -66,10 +66,10 @@ const AgregarClient = () => {
                 Segundo Nombre
               </label>
               <input
-                name="Segundo_nombre"
-                id="Segundo_nombre"
-                value={Segundo_nombre}
-                onChange
+                name="segundo_nombre"
+                id="segundo_nombre"
+                value={segundo_nombre}
+                onChange={(e) => setSegundo_nombre(e.target.value)}
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
               />
@@ -88,7 +88,7 @@ const AgregarClient = () => {
                 name="primer_apellido"
                 id="primer_apellido"
                 value={primer_apellido}
-                onChange
+                onChange={(e) => setPrimer_apellido(e.target.value)}
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
               />
@@ -103,14 +103,14 @@ const AgregarClient = () => {
               <label className="text-gray-300 block uppercase font-bold mb-2">
                 Segundo Apellido:
               </label>
-              <textarea
+              <input
                 name="segundo_apellido"
                 id="segundo_apellido"
                 value={segundo_apellido}
-                onChange
+                onChange={(e) => setSegundo_apellido(e.target.value)}
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
-              ></textarea>
+              />
               <i id="checkC" className="fa-solid fa-check"></i>
               <i
                 id="exclamationC"
@@ -126,10 +126,10 @@ const AgregarClient = () => {
                 Direccion
               </label>
               <input
-                name="Direccion"
-                id="Direccion"
-                value={Direccion}
-                onChange
+                name="direccion"
+                id="direccion"
+                value={direccion}
+                onChange={(e) => setDireccion(e.target.value)}
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
               />
@@ -148,10 +148,10 @@ const AgregarClient = () => {
                 Telefono
               </label>
               <input
-                name="Telefono"
-                id="Telefono"
-                value={Telefono}
-                onChange
+                name="telefono"
+                id="telefono"
+                value={telefono}
+                onChange={(e) => setTelefono(e.target.value)}
                 type="text"
                 className="form-control bg-gray-200 text-gray-700 border  border-secundary rounded py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-green-200"
               />
