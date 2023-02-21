@@ -10,9 +10,9 @@ import Login_index from "./components/login/Login_index";
 import AgregarCel from "./components/celulares/AgregarCel";
 import AgregarAcc from "./components/accesorios/AgregarAcc";
 import EditarCel from "./components/celulares/EditarCel";
-import AgregarClient from "./components/clientes/AgregarClient";
 import EditarClient from "./components/clientes/EditarClient";
 import EditarAcc from "./components/accesorios/EditarAcc";
+import AgregarClient from "./components/clientes/AgregarClient";
 
 ///Creacion de rutas
 
@@ -51,12 +51,12 @@ const router = createBrowserRouter([
     errorElement: <Error404 />,
   },
   {
-    path: "/edit-client",
+    path: "/edit-client/:id",
     element: <EditarClient />,
     errorElement: <Error404 />,
   },
   {
-    path: "/add-client",
+    path: "/addclient",
     element: <AgregarClient />,
     errorElement: <Error404 />,
   },
