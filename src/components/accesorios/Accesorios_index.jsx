@@ -66,6 +66,7 @@ const Accesorios_index = () => {
 
   return (
     <section className="contenedor-principal">
+      <div className="divFondo "></div>
       <Header />
       <section className="accesorios-container">
         <Link to="/add-acc">Agregar Nuevo Accesorio</Link>
@@ -97,10 +98,10 @@ const Accesorios_index = () => {
 
                 {/* OTRA FORMA DE MOSTRAR LAS CARDS */}
 
-                <div class="wrapper">
-                  <div class="overviewInfo">
-                    <div class="actions">
-                      <div class="backbutton ">
+                <div className="wrapper">
+                  <div className="overviewInfo">
+                    <div className="actions">
+                      <div className="backbutton ">
                         <svg
                           width="24"
                           height="24"
@@ -109,7 +110,7 @@ const Accesorios_index = () => {
                           xmlns="http://www.w3.org/2000/svg"
                         ></svg>
                       </div>
-                      <div class="cartbutton neurobutton">
+                      <div className="cartbutton neurobutton">
                         <svg
                           width="24"
                           height="24"
@@ -135,54 +136,54 @@ const Accesorios_index = () => {
                       </div>
                     </div>
 
-                    <div class="productinfo">
-                      <div class="grouptext">
+                    <div className="productinfo">
+                      <div className="grouptext">
                         <h3>TIPO DE ACCESORIO:</h3>
                         <p>{accesorios.marca}</p>
                       </div>
-                      <div class="grouptext">
+                      <div className="grouptext">
                         <h3>CANTIDAD:</h3>
                         <p>{accesorios.referencia}</p>
                       </div>
-                      <div class="grouptext">
+                      <div className="grouptext">
                         <h3>VALOR:</h3>
                         <p>{accesorios.precio}</p>
                       </div>
                     </div>
                   </div>
 
-                  <div class="productSpecifications">
+                  <div className="productSpecifications">
                     <h1 className="TitleCard">CARACTERISTICAS</h1>
                     <p>{accesorios.caracteristicas}</p>
 
-                    <div class="productFeatures">
-                      <div class="feature">
-                        <div class="featureIcon"></div>
-                        <div class="featureText"></div>
+                    <div className="productFeatures">
+                      <div className="feature">
+                        <div className="featureIcon"></div>
+                        <div className="featureText"></div>
                       </div>
-                      <div class="feature">
-                        <div class="featureIcon"></div>
-                        <div class="featureText"></div>
+                      <div className="feature">
+                        <div className="featureIcon"></div>
+                        <div className="featureText"></div>
                       </div>
                     </div>
 
-                    <div class="checkoutButton">
-                      <div class="priceTag">
+                    <div className="checkoutButton">
+                      <div className="priceTag">
                         <span>
                           <button onClick={() => confirEliminar(accesorios.id)}>
-                            <i className="fa-solid fa-trash"></i>
+                            <i classNameName="fa-solid fa-trash"></i>
                           </button>
                         </span>
                       </div>
                       <div>
                         <Link
                           to={`/edit-acc/${accesorios.id}`}
-                          className="fa-solid fa-pen-to-square"
+                          classNameName="fa-solid fa-pen-to-square"
                         ></Link>
                       </div>
-                      <button class="preorder">
+                      <button className="preorder">
                         <p>Preorder</p>
-                        <div class="buttonaction">
+                        <div className="buttonaction">
                           <svg
                             width="24"
                             height="24"

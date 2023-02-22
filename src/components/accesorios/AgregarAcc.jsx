@@ -31,6 +31,7 @@ const AgregarAcc = () => {
   return (
     /*  Estructura de la tabla */
     <section className="container">
+      <div className="divFondo "></div>
       <section className="accesorios-container">
         <section className="listado-accesorios">
           <h1>AGREGAR NUEVO ACCESORIO</h1>

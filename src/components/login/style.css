@@ -1,0 +1,92 @@
+.cont-form-login {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cont-form-login form {
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #000341;
+  padding: 40px 60px 40px 60px;
+  border-radius: 20px;
+  color: white;
+}
+
+.subtitulo {
+  font-size: 13px;
+  text-transform: lowercase;
+}
+
+.Nocuenta {
+  font-size: 13px;
+  text-transform: lowercase;
+}
+
+.TextLog {
+  color: #40ddff;
+  font-size: larger;
+}
+
+.inp-login {
+  width: 90%;
+  position: relative;
+}
+
+.cont-form-login input {
+  outline: none;
+  color: black;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#exclamationUser,
+#exclamationPass,
+#checkUser,
+#checkPass {
+  opacity: 0;
+  top: 5px;
+  right: -40px;
+}
+
+.login-alert {
+  position: absolute;
+  left: 300px;
+  top: -5px;
+  background: rgb(124, 35, 35);
+  width: 150px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  color: white;
+  box-shadow: 3px 3px 10px black;
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+#adv-log {
+  text-align: center;
+  opacity: 0;
+}
+
+.login-but {
+  padding: 10px 40px;
+
+  border-radius: 20px;
+  border: 2px solid blue;
+}
+
+.login-but:hover {
+  box-shadow: 0px 0px 10px blue;
+  text-shadow: 0px 0px 10px blue;
+}
